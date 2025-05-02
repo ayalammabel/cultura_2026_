@@ -47,12 +47,8 @@
     .dimensiones {
       display: flex;
       justify-content: center;
-      gap: 40px;
+      gap: 60px;
       margin: 10px 0 20px;
-    }
-
-    .dimensiones .etapa {
-      width: 200px;
     }
 
     .bloques {
@@ -104,6 +100,27 @@
     .volver:hover {
       background-color: #6a1b9a;
     }
+
+    /* Botón especial para Hecho Generador */
+    .boton-generador {
+      display: block;
+      text-decoration: none;
+      color: #2d2d2d;
+      background-color: #B39DDB;
+      padding: 18px 30px;
+      font-size: 16px;
+      width: 380px;
+      margin: 20px auto 10px;
+      border-radius: 10px;
+      font-weight: bold;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .boton-generador:hover {
+      background-color: #9575CD;
+    }
+
   </style>
 </head>
 <body>
@@ -128,7 +145,6 @@
 <a href="rap.html" class="etapa" style="display: block; text-decoration: none; color: inherit;">
   Regiones Administrativas y de Planificación (RAP)
 </a>
-  
 
 <div class="arrow"><svg viewBox="0 0 24 24"><path d="M12 4v12M5 12l7 8 7-8" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 
@@ -152,8 +168,10 @@
 
 <div class="arrow"><svg viewBox="0 0 24 24"><path d="M12 4v12M5 12l7 8 7-8" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 
-<!-- CULTURA como hecho generador -->
-<div class="etapa">CULTURA, PATRIMONIO Y DEPORTE COMO HECHO GENERADOR</div>
+<!-- CULTURA Y PATRIMONIO COMO HECHO GENERADOR -->
+<a href="hecho_generador.html" class="boton-generador">
+  CULTURA Y PATRIMONIO COMO HECHO GENERADOR
+</a>
 
 <div class="arrow"><svg viewBox="0 0 24 24"><path d="M12 4v12M5 12l7 8 7-8" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 
@@ -161,7 +179,7 @@
 <div class="etapa">Dimensiones</div>
 
 <!-- Intrínseca e Instrumental -->
-<div style="display: flex; justify-content: center; gap: 60px; margin-top: 10px; margin-bottom: 20px;">
+<div class="dimensiones">
   <a href="intrinseca.html" 
      style="text-decoration: none; color: black; background-color: #C8E6C9; padding: 12px 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); font-weight: bold;">
     Intrínseca
@@ -206,8 +224,6 @@
 
 </body>
 </html>
-
-
 
 
 

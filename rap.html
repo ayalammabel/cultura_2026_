@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>RAP - Regiones Administrativas y de Planificación</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      color: #4a148c;
+      margin: 20px;
+    }
+
+    #map {
+      height: 80vh;
+      width: 90%;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+
+    .legend {
+      background: white;
+      padding: 10px;
+      line-height: 1.5em;
+      font-size: 14px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    .legend i {
+      width: 14px;
+      height: 14px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.7;
+    }
+
+    .volver {
+      display: block;
+      text-align: center;
+      margin: 20px auto;
+      text-decoration: none;
+      color: white;
+      background-color: #4a148c;
+      padding: 10px 20px;
+      border-radius: 8px;
+      width: fit-content;
+      font-weight: bold;
+    }
+
+    .volver:hover {
+      background-color: #6a1b9a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Regiones Administrativas de Planificación - RAP</h1>
+  <div id="map"></div>
+  <a class="volver" href="index.html">← Volver al inicio</a>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map', {
+      zoomControl: false,
+      attributionControl: false
+    }).setView([4.6, -74.1], 5.3);
+
+    const regionColors = {
+      "Amazonía": "#81C784",
+      "Andina": "#64B5F6",
+      "Caribe": "#FFD54F",
+      "Pacífico": "#BA68C8",
+      "Orinoquía": "#4DD0E1",
+      "Centro Sur": "#F06292"
+    };
+
+    function getColor(region) {
+      return regionColors[region] || "#BDBDBD";
+    }
+
+    function style(feature) {
+      return {
+        fillColor: getColor(feature.properties.REGIONES_A),
+        weight: 1.5,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.7
+      };
+    }
+
+    function onEachFeature(feature, layer) {
+      if (feature.properties && feature.properties.NOM_DEPT) {
+        layer.bindTooltip(feature.properties.NOM_DEPT, {
+          direction: "center",
+          permanent: false,
+          className: "leaflet-tooltip"
+        });
+      }
+    }
+
+    // Cargar la capa GeoJSON
+    fetch('rap.geojson')
+      .then(res => res.json())
+      .then(data => {
+        L.geoJSON(data, {
+          style: style,
+          onEachFeature: onEachFeature
+        }).addTo(map);
+
+        map.fitBounds(L.geoJSON(data).getBounds());
+      });
+
+    // Leyenda
+    const legend = L.control({position: 'bottomright'});
+
+    legend.onAdd = function (map) {
+      const div = L.DomUtil.create('div', 'legend');
+      const regions = Object.keys(regionColors);
+      for (let region of regions) {
+        div.innerHTML +=
+          `<i style="background:${regionColors[region]}"></i> ${region}<br>`;
+      }
+      return div;
+    };
+
+    legend.addTo(map);
+  </script>
+
+</body>
+</html>

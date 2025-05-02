@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadena de Planeación</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #4a148c;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 10px;
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    .label {
+      font-weight: bold;
+      color: #4a148c;
+      text-align: right;
+      padding-right: 20px;
+    }
+
+    .box {
+      background: #ede7f6;
+      border-radius: 5px;
+      padding: 8px;
+      margin: 3px 0;
+    }
+
+    .transversal {
+      grid-column: 1 / span 2;
+      text-align: left;
+      font-weight: bold;
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 2px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cadena de Planeación Cultural</h1>
+
+  <div class="grid-container">
+    <div class="label">Largo plazo</div>
+    <div>
+      <div class="box">PER</div>
+      <div class="box">Sistema de Monitoreo</div>
+      <div class="box">Ejes Estratégicos</div>
+      <div class="box">Indicador largo plazo</div>
+    </div>
+
+    <div class="label">Mediano plazo</div>
+    <div>
+      <div class="box">ODS</div>
+      <div class="box">Políticas públicas</div>
+      <div class="box">PER</div>
+      <div class="box">Indicador mediano plazo</div>
+    </div>
+
+    <div class="label">Corto plazo</div>
+    <div>
+      <div class="box">Planes de desarrollo nacional</div>
+      <div class="box">Planes de desarrollo territorial</div>
+      <div class="box">Indicador corto plazo</div>
+    </div>
+
+    <div class="transversal">Ejes transversales</div>
+  </div>
+</body>
+</html>

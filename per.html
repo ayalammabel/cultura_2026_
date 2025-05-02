@@ -2,125 +2,103 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Cultura como Hecho Generador</title>
+  <title>Flujo: Cultura como Hecho Generador</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #f8f8fc;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .container {
-      position: relative;
-      width: 900px;
-      height: 700px;
+      padding: 40px;
+      text-align: center;
     }
 
     h1 {
-      text-align: center;
       color: #4a148c;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+      margin-bottom: 30px;
     }
 
-    .circle {
-      position: absolute;
-      top: 270px;
-      left: 370px;
-      width: 160px;
-      height: 160px;
-      background-color: #4a148c;
-      border-radius: 50%;
-      color: white;
+    .bloque {
+      background-color: #ede7f6;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 500px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       font-weight: bold;
+      font-size: 16px;
+    }
+
+    .flecha {
+      font-size: 24px;
+      color: #888;
+    }
+
+    .grupo-ejes {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      flex-direction: column;
+      gap: 10px;
+      margin: 10px auto;
+      max-width: 400px;
     }
 
-    .btn {
-      position: absolute;
+    .eje {
       background-color: #cddc39;
-      padding: 12px 20px;
-      border-radius: 8px;
-      box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
-      font-weight: bold;
+      border-radius: 6px;
+      padding: 10px;
       cursor: pointer;
-      transition: transform 0.2s;
-      text-align: center;
-      max-width: 200px;
+      transition: background-color 0.3s;
     }
 
-    .btn:hover {
-      transform: scale(1.05);
+    .eje:hover {
+      background-color: #afb42b;
+      color: white;
     }
 
-    /* Posiciones específicas de los botones */
-    #btn1 { top: 90px; left: 180px; }
-    #btn2 { top: 90px; left: 520px; }
-    #btn3 { top: 240px; left: 50px; }
-    #btn4 { top: 490px; left: 160px; }
-    #btn5 { top: 490px; left: 560px; }
-    #btn6 { top: 240px; left: 700px; }
-    #btn7 { top: 400px; left: 730px; }
-
-    svg.arrow {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
+    .volver {
+      margin-top: 50px;
     }
 
-    .arrow line {
-      stroke: #999;
-      stroke-width: 2;
-      marker-end: url(#arrowhead);
+    .volver a {
+      background-color: #4a148c;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .volver a:hover {
+      background-color: #6a1b9a;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Cultura como Hecho Generador</h1>
 
-    <!-- Flechas SVG -->
-    <svg class="arrow">
-      <defs>
-        <marker id="arrowhead" markerWidth="10" markerHeight="7"
-                refX="10" refY="3.5" orient="auto">
-          <polygon points="0 0, 10 3.5, 0 7" fill="#999"/>
-        </marker>
-      </defs>
-      <!-- Aquí debes ajustar manualmente las coordenadas de las líneas según la posición real -->
-      <line x1="250" y1="120" x2="450" y2="290" />
-      <line x1="600" y1="120" x2="450" y2="290" />
-      <line x1="120" y1="260" x2="450" y2="330" />
-      <line x1="210" y1="510" x2="450" y2="370" />
-      <line x1="620" y1="510" x2="470" y2="390" />
-      <line x1="750" y1="270" x2="530" y2="310" />
-      <line x1="780" y1="430" x2="530" y2="350" />
-    </svg>
+  <h1>Cultura como Hecho Generador</h1>
 
-    <!-- Círculo central -->
-    <div class="circle">CULTURA</div>
+  <div class="bloque">¿Qué es un Hecho Generador?</div>
+  <div class="flecha">↓</div>
 
-    <!-- Botones -->
-    <div class="btn" id="btn1">¿Qué es un Hecho Generador?</div>
-    <div class="btn" id="btn2">¿Qué es el PER?</div>
-    <div class="btn" id="btn3">Proyectos Regionales</div>
-    <div class="btn" id="btn4">Participación</div>
-    <div class="btn" id="btn5">Desarrollo Económico</div>
-    <div class="btn" id="btn6">Ordenamiento Territorial</div>
-    <div class="btn" id="btn7">Gobernanza Territorial</div>
+  <div class="bloque">CULTURA COMO HECHO GENERADOR</div>
+  <div class="flecha">↓</div>
+
+  <div class="bloque">Aportes desde la Cultura</div>
+
+  <div class="grupo-ejes">
+    <div class="eje">Participación</div>
+    <div class="eje">Identidad Regional</div>
+    <div class="eje">Ordenamiento Territorial</div>
+    <div class="eje">Gobernanza Territorial</div>
+    <div class="eje">Proyectos Regionales</div>
   </div>
+
+  <div class="flecha">↓</div>
+  <div class="bloque">Resultados Esperados: Desarrollo Económico, Integración Regional</div>
+
+  <div class="volver">
+    <a href="index.html">Volver al inicio</a>
+  </div>
+
 </body>
 </html>
-
 

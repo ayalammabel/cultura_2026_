@@ -18,24 +18,43 @@
     .etapa {
       background-color: #ede7f6;
       border-radius: 10px;
-      margin: 20px auto;
+      margin: 20px auto 10px;
       padding: 15px;
       font-weight: bold;
       width: 300px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       cursor: pointer;
       transition: 0.3s;
+      position: relative;
     }
 
     .etapa:hover {
       background-color: #d1c4e9;
     }
 
+    .arrow {
+      width: 2px;
+      height: 20px;
+      background-color: #999;
+      margin: 0 auto;
+    }
+
+    .arrow::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      margin: 0 auto;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 10px solid #999;
+    }
+
     .bloques {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 10px;
+      margin-top: 20px;
     }
 
     .bloque {
@@ -86,7 +105,6 @@
 
 <h1>Cultura como Hecho Generador</h1>
 
-<!-- ¿Qué es un hecho generador? -->
 <div class="popup-container">
   <div class="etapa" onclick="togglePopup('popup-hecho')">¿Qué es un Hecho Generador?</div>
   <div class="popup-texto" id="popup-hecho">
@@ -94,7 +112,8 @@
   </div>
 </div>
 
-<!-- ¿Qué es el PER? -->
+<div class="arrow"></div>
+
 <div class="popup-container">
   <div class="etapa" onclick="togglePopup('popup-per')">¿Qué es el PER?</div>
   <div class="popup-texto" id="popup-per">
@@ -102,10 +121,12 @@
   </div>
 </div>
 
-<!-- CULTURA COMO HECHO GENERADOR -->
+<div class="arrow"></div>
+
 <div class="etapa">CULTURA COMO HECHO GENERADOR</div>
 
-<!-- Aportes desde la Cultura -->
+<div class="arrow"></div>
+
 <div class="etapa">Aportes desde la Cultura</div>
 
 <div class="bloques">
@@ -119,37 +140,8 @@
     La identidad regional es consolidada a partir del reconocimiento de las expresiones culturales, tradiciones y memorias compartidas, lo cual refuerza el sentido de pertenencia en los territorios.
   </div>
 
-  <div class="bloque" onclick="togglePopup('popup-ordenamiento')">Ordenamiento Territorial</div>
-  <div class="popup-texto" id="popup-ordenamiento">
-    El enfoque cultural aporta al ordenamiento territorial mediante la incorporación de valores simbólicos, prácticas y saberes en la organización del espacio, reconociendo la diversidad y el patrimonio local.
-  </div>
+  <div class="blo
 
-  <div class="bloque" onclick="togglePopup('popup-gobernanza')">Gobernanza Territorial</div>
-  <div class="popup-texto" id="popup-gobernanza">
-    La cultura promueve modelos de gobernanza territorial participativa, incluyente y diferencial, articulando a los actores locales, institucionales y comunitarios.
-  </div>
-
-  <div class="bloque" onclick="togglePopup('popup-proyectos')">Proyectos Regionales</div>
-  <div class="popup-texto" id="popup-proyectos">
-    Los proyectos regionales culturales potencian el desarrollo territorial, integrando iniciativas estratégicas que valoran el patrimonio, promueven el desarrollo creativo y fortalecen el tejido social.
-  </div>
-</div>
-
-<a class="volver" href="index.html">← Volver al inicio</a>
-
-<script>
-  function togglePopup(id) {
-    var popup = document.getElementById(id);
-    if (popup.style.display === "none" || popup.style.display === "") {
-      popup.style.display = "block";
-    } else {
-      popup.style.display = "none";
-    }
-  }
-</script>
-
-</body>
-</html>
 
 
 

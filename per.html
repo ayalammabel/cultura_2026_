@@ -140,7 +140,38 @@
     La identidad regional es consolidada a partir del reconocimiento de las expresiones culturales, tradiciones y memorias compartidas, lo cual refuerza el sentido de pertenencia en los territorios.
   </div>
 
-  <div class="blo
+  <div class="bloque" onclick="togglePopup('popup-ordenamiento')">Ordenamiento Territorial</div>
+  <div class="popup-texto" id="popup-ordenamiento">
+    El enfoque cultural aporta al ordenamiento territorial mediante la incorporación de valores simbólicos, prácticas y saberes en la organización del espacio, reconociendo la diversidad y el patrimonio local.
+  </div>
+
+  <div class="bloque" onclick="togglePopup('popup-gobernanza')">Gobernanza Territorial</div>
+  <div class="popup-texto" id="popup-gobernanza">
+    La cultura promueve modelos de gobernanza territorial participativa, incluyente y diferencial, articulando a los actores locales, institucionales y comunitarios.
+  </div>
+
+  <div class="bloque" onclick="togglePopup('popup-proyectos')">Proyectos Regionales</div>
+  <div class="popup-texto" id="popup-proyectos">
+    Los proyectos regionales culturales potencian el desarrollo territorial, integrando iniciativas estratégicas que valoran el patrimonio, promueven el desarrollo creativo y fortalecen el tejido social.
+  </div>
+</div>
+
+<a class="volver" href="index.html">← Volver al inicio</a>
+
+<script>
+  function togglePopup(id) {
+    var popup = document.getElementById(id);
+    if (popup.style.display === "none" || popup.style.display === "") {
+      popup.style.display = "block";
+    } else {
+      popup.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>
+
 
 
 

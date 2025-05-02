@@ -28,9 +28,7 @@
       writing-mode: vertical-rl;
       transform: rotate(180deg);
       font-weight: bold;
-      color: #4a148c;
       text-align: center;
-      background-color: #ede7f6;
       border-radius: 12px;
       box-shadow: 0 0 6px rgba(0,0,0,0.1);
       padding: 15px;
@@ -38,6 +36,7 @@
       align-items: center;
       justify-content: center;
       min-height: 100%;
+      color: #4a148c;
     }
 
     .ejes-vertical a {
@@ -67,14 +66,12 @@
       vertical-align: middle;
       text-align: center;
       padding: 15px;
-      background-color: #ede7f6;
       border-radius: 12px;
       min-width: 130px;
     }
 
     .caja-bloque {
       display: table-cell;
-      background-color: #ede7f6;
       border-radius: 12px;
       padding: 15px;
       vertical-align: top;
@@ -102,6 +99,28 @@
       color: #4a148c;
       font-weight: bold;
     }
+
+    /* Colores específicos por bloque */
+    .ejes-transversales {
+      background-color: #e1bee7;
+    }
+
+    .sistema-monitoreo {
+      background-color: #b3e5fc;
+    }
+
+    .largo {
+      background-color: #dcedc8;
+    }
+
+    .mediano {
+      background-color: #fff9c4;
+    }
+
+    .corto {
+      background-color: #ffe0b2;
+    }
+
   </style>
 </head>
 <body>
@@ -110,23 +129,23 @@
 
   <div class="contenedor">
     <!-- Ejes Transversales -->
-    <div class="ejes-vertical">
+    <div class="ejes-vertical ejes-transversales">
       <a href="ejes_transversales.html">Ejes transversales</a>
     </div>
 
     <!-- Tabla central -->
     <div class="tabla">
       <div class="fila">
-        <div class="etiqueta">Largo plazo</div>
-        <div class="caja-bloque">
+        <div class="etiqueta largo">Largo plazo</div>
+        <div class="caja-bloque largo">
           <div class="bloque"><a href="per.html">Plan Estratégico Regional - PER</a></div>
           <div class="bloque"><a href="ejes.html">Ejes Estratégicos</a></div>
         </div>
       </div>
 
       <div class="fila">
-        <div class="etiqueta">Mediano plazo</div>
-        <div class="caja-bloque">
+        <div class="etiqueta mediano">Mediano plazo</div>
+        <div class="caja-bloque mediano">
           <div class="bloque">Objetivos de Desarrollo Sostenible - ODS</div>
           <div class="bloque">Políticas públicas</div>
           <div class="bloque">Proyecto Estratégico Regional</div>
@@ -134,8 +153,8 @@
       </div>
 
       <div class="fila">
-        <div class="etiqueta">Corto plazo</div>
-        <div class="caja-bloque">
+        <div class="etiqueta corto">Corto plazo</div>
+        <div class="caja-bloque corto">
           <div class="bloque">Planes de Desarrollo Nacional - PND</div>
           <div class="bloque">Planes de Desarrollo Territorial - PDT</div>
         </div>
@@ -143,11 +162,12 @@
     </div>
 
     <!-- Sistema de Monitoreo -->
-    <div class="ejes-vertical">
-      <a href="#">Sistema de Monitoreo</a>
+    <div class="ejes-vertical sistema-monitoreo">
+      <a href="sistema_monitoreo.html">Sistema de Monitoreo</a>
     </div>
   </div>
 
 </body>
 </html>
+
 

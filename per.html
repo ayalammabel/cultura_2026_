@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Alineación de la Planeación Estratégica </title>
+  <title>Alineación de la Planeación Estratégica</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -42,6 +42,17 @@
       width: 24px;
       height: 24px;
       fill: #999;
+    }
+
+    .dimensiones {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 10px 0 20px;
+    }
+
+    .dimensiones .etapa {
+      width: 200px;
     }
 
     .bloques {
@@ -121,11 +132,7 @@
   </div>
 </div>
 
-<div class="arrow">
-  <svg viewBox="0 0 24 24">
-    <path d="M12 4v12M5 12l7 8 7-8" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</div>
+<div class="arrow"><svg viewBox="0 0 24 24"><path d="M12 4v12M5 12l7 8 7-8" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 
 <!-- ¿Qué es un hecho generador? -->
 <div class="popup-container">
@@ -135,11 +142,7 @@
   </div>
 </div>
 
-<div class="arrow">
-  <svg viewBox="0 0 24 24">
-    <path d="M12 4v12M5 12l7 8 7-8" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</div>
+<div class="arrow"><svg viewBox="0 0 24 24"><path d="M12 4v12M5 12l7 8 7-8" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 
 <!-- ¿Qué es el PER? -->
 <div class="popup-container">
@@ -149,64 +152,56 @@
   </div>
 </div>
 
-<div class="arrow">
-  <svg viewBox="0 0 24 24">
-    <path d="M12 4v12M5 12l7 8 7-8" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</div>
+<div class="arrow"><svg viewBox="0 0 24 24"><path d="M12 4v12M5 12l7 8 7-8" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 
+<!-- CULTURA como hecho generador -->
 <div class="etapa">CULTURA, PATRIMONIO Y DEPORTE COMO HECHO GENERADOR</div>
 
-<div class="arrow">
-  <svg viewBox="0 0 24 24">
-    <path d="M12 4v12M5 12l7 8 7-8" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
+<div class="arrow"><svg viewBox="0 0 24 24"><path d="M12 4v12M5 12l7 8 7-8" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+<!-- Dimensiones -->
+<div class="etapa">Dimensiones</div>
+
+<!-- Intrínseca e Instrumental -->
+<div class="dimensiones">
+  <div class="etapa">Intrínseca</div>
+  <div class="etapa">Instrumental</div>
 </div>
 
+<div class="arrow"><svg viewBox="0 0 24 24"><path d="M12 4v12M5 12l7 8 7-8" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+<!-- Aportes -->
 <div class="etapa">Aportes desde la Cultura</div>
 
 <div class="bloques">
   <div class="bloque" onclick="togglePopup('popup-participacion')">Participación</div>
-  <div class="popup-texto" id="popup-participacion">
-    La cultura fortalece la participación ciudadana como elemento esencial de la construcción territorial, permitiendo el reconocimiento de voces diversas y el ejercicio de la ciudadanía activa.
-  </div>
+  <div class="popup-texto" id="popup-participacion">La cultura fortalece la participación ciudadana como elemento esencial de la construcción territorial...</div>
 
   <div class="bloque" onclick="togglePopup('popup-identidad')">Identidad Regional</div>
-  <div class="popup-texto" id="popup-identidad">
-    La identidad regional es consolidada a partir del reconocimiento de las expresiones culturales, tradiciones y memorias compartidas, lo cual refuerza el sentido de pertenencia en los territorios.
-  </div>
+  <div class="popup-texto" id="popup-identidad">La identidad regional es consolidada a partir del reconocimiento de las expresiones culturales...</div>
 
   <div class="bloque" onclick="togglePopup('popup-ordenamiento')">Ordenamiento Territorial</div>
-  <div class="popup-texto" id="popup-ordenamiento">
-    El enfoque cultural aporta al ordenamiento territorial mediante la incorporación de valores simbólicos, prácticas y saberes en la organización del espacio, reconociendo la diversidad y el patrimonio local.
-  </div>
+  <div class="popup-texto" id="popup-ordenamiento">El enfoque cultural aporta al ordenamiento territorial mediante la incorporación de valores simbólicos...</div>
 
   <div class="bloque" onclick="togglePopup('popup-gobernanza')">Gobernanza Territorial</div>
-  <div class="popup-texto" id="popup-gobernanza">
-    La cultura promueve modelos de gobernanza territorial participativa, incluyente y diferencial, articulando a los actores locales, institucionales y comunitarios.
-  </div>
+  <div class="popup-texto" id="popup-gobernanza">La cultura promueve modelos de gobernanza territorial participativa...</div>
 
   <div class="bloque" onclick="togglePopup('popup-proyectos')">Proyectos Regionales</div>
-  <div class="popup-texto" id="popup-proyectos">
-    Los proyectos regionales culturales potencian el desarrollo territorial, integrando iniciativas estratégicas que valoran el patrimonio, promueven el desarrollo creativo y fortalecen el tejido social.
-  </div>
+  <div class="popup-texto" id="popup-proyectos">Los proyectos regionales culturales potencian el desarrollo territorial...</div>
 </div>
 
 <a class="volver" href="index.html">← Volver al inicio</a>
 
 <script>
   function togglePopup(id) {
-    var popup = document.getElementById(id);
-    if (popup.style.display === "none" || popup.style.display === "") {
-      popup.style.display = "block";
-    } else {
-      popup.style.display = "none";
-    }
+    const popup = document.getElementById(id);
+    popup.style.display = (popup.style.display === "none" || popup.style.display === "") ? "block" : "none";
   }
 </script>
 
 </body>
 </html>
+
 
 
 

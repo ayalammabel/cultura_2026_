@@ -25,7 +25,6 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       cursor: pointer;
       transition: 0.3s;
-      position: relative;
     }
 
     .etapa:hover {
@@ -38,7 +37,7 @@
       align-items: center;
       margin: 10px 0 20px 0;
     }
-    
+
     .arrow svg {
       width: 24px;
       height: 24px;
@@ -100,6 +99,35 @@
 
 <h1>Cultura como Hecho Generador</h1>
 
+<!-- Esquemas Asociativos Territoriales -->
+<div class="popup-container">
+  <div class="etapa" onclick="togglePopup('popup-esquemas')">Esquemas Asociativos Territoriales</div>
+  <div class="popup-texto" id="popup-esquemas">
+    Son acuerdos de voluntades entre entidades territoriales o asociaciones de entidades territoriales, con el fin de alcanzar objetivos comunes que no podrían lograr individualmente y así obtener el mejoramiento del nivel de vida de sus comunidades.
+  </div>
+</div>
+
+<div class="arrow">
+  <svg viewBox="0 0 24 24">
+    <path d="M12 4v12M5 12l7 8 7-8" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+
+<!-- RAP -->
+<div class="popup-container">
+  <div class="etapa" onclick="togglePopup('popup-rap')">Regiones Administrativas y de Planificación (RAP)</div>
+  <div class="popup-texto" id="popup-rap">
+    Son un EAT de escala supradepartamental, conformado como entidades administrativas de derecho público por dos o más departamentos que tengan continuidad geográfica y proximidad (tratándose del territorio insular colombiano). Los distritos especiales dentro de los departamentos que van a constituir la RAP.
+  </div>
+</div>
+
+<div class="arrow">
+  <svg viewBox="0 0 24 24">
+    <path d="M12 4v12M5 12l7 8 7-8" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+
+<!-- ¿Qué es un hecho generador? -->
 <div class="popup-container">
   <div class="etapa" onclick="togglePopup('popup-hecho')">¿Qué es un Hecho Generador?</div>
   <div class="popup-texto" id="popup-hecho">
@@ -113,6 +141,7 @@
   </svg>
 </div>
 
+<!-- ¿Qué es el PER? -->
 <div class="popup-container">
   <div class="etapa" onclick="togglePopup('popup-per')">¿Qué es el PER?</div>
   <div class="popup-texto" id="popup-per">

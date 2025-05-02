@@ -5,65 +5,58 @@
   <title>Ejes Transversales</title>
   <style>
     body {
-      background-color: #0d0d0d;
-      color: white;
       font-family: Arial, sans-serif;
-      padding: 40px;
-      text-align: center;
+      background-color: #f8f8fc;
+      margin: 40px;
+      color: #333;
     }
 
     h1 {
-      color: #ffffff;
-      margin-bottom: 50px;
+      text-align: center;
+      color: #4a148c;
+      margin-bottom: 40px;
     }
 
-    .contenedor-ejes {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      max-width: 800px;
-      margin: 0 auto;
-      gap: 20px;
-    }
-
-    .eje {
+    .boton {
       display: flex;
       align-items: center;
-      padding: 20px;
-      border-radius: 12px;
+      justify-content: flex-start;
+      padding: 15px 20px;
+      margin: 10px auto;
+      border-radius: 10px;
       color: white;
-      font-size: 18px;
-      text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
-      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      width: 80%;
+      max-width: 800px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background 0.3s;
     }
 
-    .eje:hover {
-      opacity: 0.85;
+    .boton span {
+      font-size: 22px;
+      margin-right: 15px;
     }
 
-    .eje.vida {
-      background-color: #2ecc71; /* Verde */
+    .verde { background-color: #2ecc71; }
+    .azul { background-color: #3498db; }
+    .morado { background-color: #9b59b6; }
+
+    .descripcion {
+      display: none;
+      background-color: white;
+      padding: 20px;
+      margin: 10px auto 30px auto;
+      border-left: 5px solid #4a148c;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 800px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .eje.libertades {
-      background-color: #3498db; /* Azul */
-    }
-
-    .eje.participacion {
-      background-color: #9b59b6; /* Morado */
-    }
-
-    .eje .numero {
-      font-size: 32px;
-      margin-right: 20px;
-      opacity: 0.9;
-    }
-
-    .eje .titulo {
-      flex: 1;
-      text-align: left;
+    .descripcion.visible {
+      display: block;
     }
   </style>
 </head>
@@ -71,22 +64,33 @@
 
   <h1>Ejes Transversales</h1>
 
-  <div class="contenedor-ejes">
-    <a href="#" class="eje vida">
-      <div class="numero">1</div>
-      <div class="titulo">Vida</div>
-    </a>
-
-    <a href="#" class="eje libertades">
-      <div class="numero">2</div>
-      <div class="titulo">Libertades</div>
-    </a>
-
-    <a href="#" class="eje participacion">
-      <div class="numero">3</div>
-      <div class="titulo">Participación</div>
-    </a>
+  <div class="boton verde" onclick="toggleDescripcion('vida')">
+    <span>1</span> Vida
   </div>
+  <div id="vida" class="descripcion">
+    Agrupa aquellas propuestas de gobierno que garantizan las condiciones biológicas y vitales para la existencia e integridad de las personas. Representa la base ontológica sin la cual no es posible el disfrute de los demás derechos. Abarca la protección de la integridad física, psicológica y moral, así como el bienestar y desarrollo para todas las formas de existencia, humanas y no humanas. No permite discriminación, marginación ni exclusión.
+  </div>
+
+  <div class="boton azul" onclick="toggleDescripcion('libertades')">
+    <span>2</span> Libertades
+  </div>
+  <div id="libertades" class="descripcion">
+    Implica garantizar la autonomía para que cada persona elija su proyecto de vida con el máximo de libertades y el mínimo de restricciones, bajo principios de respeto y comunidad. Requiere del Estado la provisión de condiciones materiales, culturales y territoriales para ejercer derechos sin exclusión. Favorece la participación y apropiación ciudadana, reconociendo identidades y promoviendo el acceso a bienes diferenciados.
+  </div>
+
+  <div class="boton morado" onclick="toggleDescripcion('participacion')">
+    <span>3</span> Participación
+  </div>
+  <div id="participacion" class="descripcion">
+    Abarca las condiciones necesarias para incidir en el desarrollo económico, social, ambiental y cultural con dignidad. Promueve capacidades y oportunidades para acceder de forma efectiva a bienes y servicios. Integra saberes, innovación, tecnología y patrimonios culturales de cada territorio como herramientas para el desarrollo justo y sostenible.
+  </div>
+
+  <script>
+    function toggleDescripcion(id) {
+      const descripcion = document.getElementById(id);
+      descripcion.classList.toggle('visible');
+    }
+  </script>
 
 </body>
 </html>

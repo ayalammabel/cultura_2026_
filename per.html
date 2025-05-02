@@ -14,139 +14,104 @@
 
     h1 {
       color: #4a148c;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      position: relative;
+      width: 900px;
+      height: 700px;
+      margin: auto;
     }
 
     .circle {
-      margin: 20px auto;
       background-color: #4a148c;
       color: white;
-      width: 200px;
-      height: 200px;
-      line-height: 200px;
+      width: 140px;
+      height: 140px;
+      line-height: 140px;
       border-radius: 50%;
+      position: absolute;
+      top: 280px;
+      left: 380px;
       font-weight: bold;
-      font-size: 16px;
-      text-align: center;
+      font-size: 14px;
+      padding: 10px;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: 40px auto;
-    }
-
-    .boton {
+    .btn {
+      position: absolute;
+      padding: 12px 14px;
       background-color: #cddc39;
       border: none;
-      padding: 15px;
-      font-size: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
       cursor: pointer;
       font-weight: bold;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    .texto {
+    .tooltip {
       display: none;
-      background-color: #f1f1f1;
-      padding: 15px;
+      position: absolute;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 250px;
       text-align: left;
-      border-radius: 5px;
-      font-size: 14px;
+      z-index: 10;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
 
-    .volver {
-      margin-top: 40px;
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #4a148c;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
+    .btn:hover + .tooltip {
+      display: block;
     }
   </style>
 </head>
 <body>
-
   <h1>Cultura como Hecho Generador</h1>
+  <div class="container">
+    <div class="circle">CULTURA<br>COMO HECHO<br>GENERADOR</div>
 
-  <div class="circle">CULTURA<br>COMO HECHO<br>GENERADOR</div>
-
-  <div class="grid">
-    <div>
-      <button class="boton" onclick="mostrar('texto1')">¿Qué es un Hecho Generador?</button>
-      <div id="texto1" class="texto">
-        Es un concepto clave que reconoce a la cultura como fuerza impulsora de transformación territorial, fortalecimiento identitario y desarrollo económico en los PER.
-      </div>
+    <button class="btn" style="top: 40px; left: 320px;">¿Qué es un Hecho Generador?</button>
+    <div class="tooltip" style="top: 85px; left: 320px;">
+      Es un concepto que reconoce la cultura como eje transformador en el desarrollo territorial, identitario y económico.
     </div>
 
-    <div>
-      <button class="boton" onclick="mostrar('texto2')">¿Qué es el PER?</button>
-      <div id="texto2" class="texto">
-        El Plan Estratégico Regional (PER) es el instrumento de planificación territorial de las RAP que busca construir una visión de desarrollo regional a largo plazo.
-      </div>
+    <button class="btn" style="top: 40px; left: 520px;">¿Qué es el PER?</button>
+    <div class="tooltip" style="top: 85px; left: 520px;">
+      Es el instrumento de planificación de las RAP que proyecta el desarrollo regional desde una visión a largo plazo.
     </div>
 
-    <div>
-      <button class="boton" onclick="mostrar('texto3')">Ordenamiento Territorial</button>
-      <div id="texto3" class="texto">
-        La cultura como hecho generador incide en cómo se distribuyen y usan los espacios, reconociendo valores patrimoniales y de identidad en el ordenamiento del territorio.
-      </div>
+    <button class="btn" style="top: 180px; left: 680px;">Ordenamiento Territorial</button>
+    <div class="tooltip" style="top: 225px; left: 680px;">
+      Reconocimiento de la cultura para distribuir y planificar los usos del territorio con base en valores patrimoniales.
     </div>
 
-    <div>
-      <button class="boton" onclick="mostrar('texto4')">Participación</button>
-      <div id="texto4" class="texto">
-        La cultura fomenta espacios de participación comunitaria y deliberativa, esenciales para construir políticas regionales legítimas y sostenibles.
-      </div>
+    <button class="btn" style="top: 330px; left: 680px;">Gobernanza Territorial</button>
+    <div class="tooltip" style="top: 375px; left: 680px;">
+      Impulsa la articulación entre instituciones y comunidades con base en dinámicas culturales.
     </div>
 
-    <div>
-      <button class="boton" onclick="mostrar('texto5')">Identidad Regional</button>
-      <div id="texto5" class="texto">
-        La cultura permite fortalecer el sentido de pertenencia y la memoria colectiva como base de cohesión social y gobernabilidad territorial.
-      </div>
+    <button class="btn" style="top: 500px; left: 520px;">Desarrollo Económico</button>
+    <div class="tooltip" style="top: 545px; left: 520px;">
+      La cultura impulsa industrias creativas, empleo y dinamiza la economía local y regional.
     </div>
 
-    <div>
-      <button class="boton" onclick="mostrar('texto6')">Gobernanza Territorial</button>
-      <div id="texto6" class="texto">
-        La inclusión de la cultura en los PER facilita la articulación entre actores e instituciones, promoviendo una gobernanza adaptada a realidades locales.
-      </div>
+    <button class="btn" style="top: 500px; left: 320px;">Identidad Regional</button>
+    <div class="tooltip" style="top: 545px; left: 320px;">
+      La cultura fortalece el sentido de pertenencia y la cohesión social del territorio.
     </div>
 
-    <div>
-      <button class="boton" onclick="mostrar('texto7')">Proyectos Regionales</button>
-      <div id="texto7" class="texto">
-        Los PER pueden incorporar proyectos culturales que contribuyan al desarrollo sostenible, la movilidad cultural y la integración regional.
-      </div>
+    <button class="btn" style="top: 330px; left: 140px;">Participación</button>
+    <div class="tooltip" style="top: 375px; left: 140px;">
+      Genera procesos participativos, democráticos e incluyentes desde la acción cultural.
     </div>
 
-    <div>
-      <button class="boton" onclick="mostrar('texto8')">Desarrollo Económico</button>
-      <div id="texto8" class="texto">
-        La cultura genera empleo, turismo, industrias creativas y valor agregado a los territorios, siendo motor de desarrollo económico desde la diversidad.
-      </div>
+    <button class="btn" style="top: 180px; left: 140px;">Proyectos Regionales</button>
+    <div class="tooltip" style="top: 225px; left: 140px;">
+      Incorporación de iniciativas culturales como ejes de articulación regional.
     </div>
   </div>
-
-  <a class="volver" href="index.html">← Volver al inicio</a>
-
-  <script>
-    function mostrar(id) {
-      const bloques = document.querySelectorAll('.texto');
-      bloques.forEach(el => {
-        if (el.id === id) {
-          el.style.display = el.style.display === "block" ? "none" : "block";
-        } else {
-          el.style.display = "none";
-        }
-      });
-    }
-  </script>
-
 </body>
 </html>
+

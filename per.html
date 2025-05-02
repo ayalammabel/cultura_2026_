@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cultura como Hecho Generador</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fefefe;
+      margin: 0;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #4a148c;
+    }
+
+    .circle {
+      margin: 20px auto;
+      background-color: #4a148c;
+      color: white;
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+
+    .boton {
+      background-color: #cddc39;
+      border: none;
+      padding: 15px;
+      font-size: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .texto {
+      display: none;
+      background-color: #f1f1f1;
+      padding: 15px;
+      text-align: left;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .volver {
+      margin-top: 40px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4a148c;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Cultura como Hecho Generador</h1>
+
+  <div class="circle">CULTURA<br>COMO HECHO<br>GENERADOR</div>
+
+  <div class="grid">
+    <div>
+      <button class="boton" onclick="mostrar('texto1')">¿Qué es un Hecho Generador?</button>
+      <div id="texto1" class="texto">
+        Es un concepto clave que reconoce a la cultura como fuerza impulsora de transformación territorial, fortalecimiento identitario y desarrollo económico en los PER.
+      </div>
+    </div>
+
+    <div>
+      <button class="boton" onclick="mostrar('texto2')">¿Qué es el PER?</button>
+      <div id="texto2" class="texto">
+        El Plan Estratégico Regional (PER) es el instrumento de planificación territorial de las RAP que busca construir una visión de desarrollo regional a largo plazo.
+      </div>
+    </div>
+
+    <div>
+      <button class="boton" onclick="mostrar('texto3')">Ordenamiento Territorial</button>
+      <div id="texto3" class="texto">
+        La cultura como hecho generador incide en cómo se distribuyen y usan los espacios, reconociendo valores patrimoniales y de identidad en el ordenamiento del territorio.
+      </div>
+    </div>
+
+    <div>
+      <button class="boton" onclick="mostrar('texto4')">Participación</button>
+      <div id="texto4" class="texto">
+        La cultura fomenta espacios de participación comunitaria y deliberativa, esenciales para construir políticas regionales legítimas y sostenibles.
+      </div>
+    </div>
+
+    <div>
+      <button class="boton" onclick="mostrar('texto5')">Identidad Regional</button>
+      <div id="texto5" class="texto">
+        La cultura permite fortalecer el sentido de pertenencia y la memoria colectiva como base de cohesión social y gobernabilidad territorial.
+      </div>
+    </div>
+
+    <div>
+      <button class="boton" onclick="mostrar('texto6')">Gobernanza Territorial</button>
+      <div id="texto6" class="texto">
+        La inclusión de la cultura en los PER facilita la articulación entre actores e instituciones, promoviendo una gobernanza adaptada a realidades locales.
+      </div>
+    </div>
+
+    <div>
+      <button class="boton" onclick="mostrar('texto7')">Proyectos Regionales</button>
+      <div id="texto7" class="texto">
+        Los PER pueden incorporar proyectos culturales que contribuyan al desarrollo sostenible, la movilidad cultural y la integración regional.
+      </div>
+    </div>
+
+    <div>
+      <button class="boton" onclick="mostrar('texto8')">Desarrollo Económico</button>
+      <div id="texto8" class="texto">
+        La cultura genera empleo, turismo, industrias creativas y valor agregado a los territorios, siendo motor de desarrollo económico desde la diversidad.
+      </div>
+    </div>
+  </div>
+
+  <a class="volver" href="index.html">← Volver al inicio</a>
+
+  <script>
+    function mostrar(id) {
+      const bloques = document.querySelectorAll('.texto');
+      bloques.forEach(el => {
+        if (el.id === id) {
+          el.style.display = el.style.display === "block" ? "none" : "block";
+        } else {
+          el.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

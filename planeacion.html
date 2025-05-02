@@ -18,7 +18,7 @@
 
     .contenedor {
       display: flex;
-      align-items: stretch;  /* <- Para que los hijos crezcan igual */
+      align-items: stretch;
       justify-content: center;
       gap: 20px;
       margin-top: 40px;
@@ -37,7 +37,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100%;       /* Ajusta automáticamente al alto del contenido */
+      min-height: 100%;
     }
 
     .tabla {
@@ -80,6 +80,17 @@
       font-size: 14px;
       box-shadow: 0 1px 2px rgba(0,0,0,0.08);
     }
+
+    .bloque a {
+      text-decoration: none;
+      color: #000;
+      display: block;
+    }
+
+    .bloque a:hover {
+      color: #4a148c;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -94,9 +105,9 @@
       <div class="fila">
         <div class="etiqueta">Largo plazo</div>
         <div class="caja-bloque">
-          <div class="bloque">Plan Estratégico Regional - PER</div>
-          <div class="bloque">Sistema de Monitoreo</div>
-          <div class="bloque">Ejes Estratégicos</div>
+          <div class="bloque"><a href="per.html">Plan Estratégico Regional - PER</a></div>
+          <div class="bloque"><a href="monitoreo.html">Sistema de Monitoreo</a></div>
+          <div class="bloque"><a href="ejes.html">Ejes Estratégicos</a></div>
           <div class="bloque">Indicador largo plazo</div>
         </div>
       </div>
@@ -125,3 +136,4 @@
 
 </body>
 </html>
+

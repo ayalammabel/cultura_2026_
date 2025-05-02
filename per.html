@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Flujo: Cultura como Hecho Generador</title>
+  <title>Cultura como Hecho Generador</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,92 +13,142 @@
 
     h1 {
       color: #4a148c;
-      margin-bottom: 30px;
+    }
+
+    .etapa {
+      background-color: #ede7f6;
+      border-radius: 10px;
+      margin: 20px auto;
+      padding: 15px;
+      font-weight: bold;
+      width: 300px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .etapa:hover {
+      background-color: #d1c4e9;
+    }
+
+    .bloques {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
     }
 
     .bloque {
-      background-color: #ede7f6;
-      border-radius: 10px;
-      padding: 15px;
-      margin: 20px auto;
-      max-width: 500px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .flecha {
-      font-size: 24px;
-      color: #888;
-    }
-
-    .grupo-ejes {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin: 10px auto;
-      max-width: 400px;
-    }
-
-    .eje {
-      background-color: #cddc39;
-      border-radius: 6px;
-      padding: 10px;
+      background-color: #d4e157;
+      border-radius: 8px;
+      margin: 10px;
+      padding: 12px 20px;
+      font-weight: 500;
+      width: 300px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: 0.3s;
     }
 
-    .eje:hover {
-      background-color: #afb42b;
-      color: white;
+    .bloque:hover {
+      background-color: #c0ca33;
+    }
+
+    .popup-texto {
+      display: none;
+      margin: 10px auto;
+      padding: 15px;
+      width: 60%;
+      background-color: #f3f3f3;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: justify;
     }
 
     .volver {
-      margin-top: 50px;
-    }
-
-    .volver a {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 10px 20px;
       background-color: #4a148c;
       color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
       text-decoration: none;
+      border-radius: 8px;
       font-weight: bold;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: 0.3s;
     }
 
-    .volver a:hover {
+    .volver:hover {
       background-color: #6a1b9a;
     }
   </style>
 </head>
 <body>
 
-  <h1>Cultura como Hecho Generador</h1>
+<h1>Cultura como Hecho Generador</h1>
 
-  <div class="bloque">¿Qué es un Hecho Generador?</div>
-  <div class="flecha">↓</div>
+<!-- ¿Qué es un hecho generador? -->
+<div class="popup-container">
+  <div class="etapa" onclick="togglePopup('popup-hecho')">¿Qué es un Hecho Generador?</div>
+  <div class="popup-texto" id="popup-hecho">
+    Un hecho generador es un elemento articulador que permite identificar, ordenar y proyectar apuestas estratégicas regionales a partir de un factor común. En este caso, la cultura es el hecho generador para orientar acciones regionales de desarrollo territorial.
+  </div>
+</div>
 
-  <div class="bloque">CULTURA COMO HECHO GENERADOR</div>
-  <div class="flecha">↓</div>
+<!-- ¿Qué es el PER? -->
+<div class="popup-container">
+  <div class="etapa" onclick="togglePopup('popup-per')">¿Qué es el PER?</div>
+  <div class="popup-texto" id="popup-per">
+    El Plan Estratégico Regional (PER) es el instrumento de planificación que orienta las acciones de desarrollo regional de mediano y largo plazo, promoviendo la articulación entre departamentos para fortalecer el desarrollo territorial desde un enfoque regional.
+  </div>
+</div>
 
-  <div class="bloque">Aportes desde la Cultura</div>
+<!-- CULTURA COMO HECHO GENERADOR -->
+<div class="etapa">CULTURA COMO HECHO GENERADOR</div>
 
-  <div class="grupo-ejes">
-    <div class="eje">Participación</div>
-    <div class="eje">Identidad Regional</div>
-    <div class="eje">Ordenamiento Territorial</div>
-    <div class="eje">Gobernanza Territorial</div>
-    <div class="eje">Proyectos Regionales</div>
+<!-- Aportes desde la Cultura -->
+<div class="etapa">Aportes desde la Cultura</div>
+
+<div class="bloques">
+  <div class="bloque" onclick="togglePopup('popup-participacion')">Participación</div>
+  <div class="popup-texto" id="popup-participacion">
+    La cultura fortalece la participación ciudadana como elemento esencial de la construcción territorial, permitiendo el reconocimiento de voces diversas y el ejercicio de la ciudadanía activa.
   </div>
 
-  <div class="flecha">↓</div>
-  <div class="bloque">Resultados Esperados: Desarrollo Económico, Integración Regional</div>
-
-  <div class="volver">
-    <a href="index.html">Volver al inicio</a>
+  <div class="bloque" onclick="togglePopup('popup-identidad')">Identidad Regional</div>
+  <div class="popup-texto" id="popup-identidad">
+    La identidad regional es consolidada a partir del reconocimiento de las expresiones culturales, tradiciones y memorias compartidas, lo cual refuerza el sentido de pertenencia en los territorios.
   </div>
+
+  <div class="bloque" onclick="togglePopup('popup-ordenamiento')">Ordenamiento Territorial</div>
+  <div class="popup-texto" id="popup-ordenamiento">
+    El enfoque cultural aporta al ordenamiento territorial mediante la incorporación de valores simbólicos, prácticas y saberes en la organización del espacio, reconociendo la diversidad y el patrimonio local.
+  </div>
+
+  <div class="bloque" onclick="togglePopup('popup-gobernanza')">Gobernanza Territorial</div>
+  <div class="popup-texto" id="popup-gobernanza">
+    La cultura promueve modelos de gobernanza territorial participativa, incluyente y diferencial, articulando a los actores locales, institucionales y comunitarios.
+  </div>
+
+  <div class="bloque" onclick="togglePopup('popup-proyectos')">Proyectos Regionales</div>
+  <div class="popup-texto" id="popup-proyectos">
+    Los proyectos regionales culturales potencian el desarrollo territorial, integrando iniciativas estratégicas que valoran el patrimonio, promueven el desarrollo creativo y fortalecen el tejido social.
+  </div>
+</div>
+
+<a class="volver" href="index.html">← Volver al inicio</a>
+
+<script>
+  function togglePopup(id) {
+    var popup = document.getElementById(id);
+    if (popup.style.display === "none" || popup.style.display === "") {
+      popup.style.display = "block";
+    } else {
+      popup.style.display = "none";
+    }
+  }
+</script>
 
 </body>
 </html>
+
 

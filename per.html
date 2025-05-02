@@ -33,21 +33,16 @@
     }
 
     .arrow {
-      width: 2px;
-      height: 20px;
-      background-color: #999;
-      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0 20px 0;
     }
-
-    .arrow::after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 0;
-      margin: 0 auto;
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      border-top: 10px solid #999;
+    
+    .arrow svg {
+      width: 24px;
+      height: 24px;
+      fill: #999;
     }
 
     .bloques {
@@ -112,7 +107,11 @@
   </div>
 </div>
 
-<div class="arrow"></div>
+<div class="arrow">
+  <svg viewBox="0 0 24 24">
+    <path d="M12 4v12M5 12l7 8 7-8" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
 
 <div class="popup-container">
   <div class="etapa" onclick="togglePopup('popup-per')">¿Qué es el PER?</div>
@@ -121,11 +120,19 @@
   </div>
 </div>
 
-<div class="arrow"></div>
+<div class="arrow">
+  <svg viewBox="0 0 24 24">
+    <path d="M12 4v12M5 12l7 8 7-8" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
 
 <div class="etapa">CULTURA COMO HECHO GENERADOR</div>
 
-<div class="arrow"></div>
+<div class="arrow">
+  <svg viewBox="0 0 24 24">
+    <path d="M12 4v12M5 12l7 8 7-8" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
 
 <div class="etapa">Aportes desde la Cultura</div>
 

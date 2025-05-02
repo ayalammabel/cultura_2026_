@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Cadena de Planeación</title>
+  <title>Cadena de Planeación Cultural</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
+      background-color: #f8f8fc;
       padding: 40px;
     }
 
@@ -15,51 +15,54 @@
       color: #4a148c;
     }
 
-    .contenedor {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .bloque {
-      background: #ede7f6;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      width: 220px;
-    }
-
-    .titulo-bloque {
-      font-weight: bold;
-      color: #4a148c;
-      text-align: center;
-      margin-bottom: 15px;
-    }
-
-    .item {
-      background: white;
-      margin: 8px 0;
-      padding: 10px;
-      border-radius: 6px;
-      text-align: center;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.08);
-    }
-
-    .etiqueta-lateral {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      text-align: center;
-      font-weight: bold;
-      color: #4a148c;
-      margin-right: 10px;
+    .tabla {
+      display: table;
+      margin: 40px auto;
+      border-collapse: separate;
+      border-spacing: 20px 10px;
     }
 
     .fila {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      justify-content: center;
+      display: table-row;
+    }
+
+    .etiqueta {
+      display: table-cell;
+      font-weight: bold;
+      color: #4a148c;
+      vertical-align: middle;
+      text-align: right;
+      padding-right: 15px;
+      white-space: nowrap;
+    }
+
+    .caja-bloque {
+      display: table-cell;
+      background-color: #ede7f6;
+      border-radius: 12px;
+      padding: 15px;
+      vertical-align: top;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+
+    .bloque {
+      margin-bottom: 10px;
+      background-color: white;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    }
+
+    .ejes {
+      text-align: left;
+      margin-top: 40px;
+      font-weight: bold;
+      color: #333;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
   </style>
@@ -68,36 +71,39 @@
 
   <h1>Cadena de Planeación Cultural</h1>
 
-  <div class="fila">
-    <div class="etiqueta-lateral">Ejes transversales</div>
+  <div class="tabla">
 
-    <div class="contenedor">
-
-      <div class="bloque">
-        <div class="titulo-bloque">Largo plazo</div>
-        <div class="item">PER</div>
-        <div class="item">Sistema de Monitoreo</div>
-        <div class="item">Ejes Estratégicos</div>
-        <div class="item">Indicador largo plazo</div>
+    <div class="fila">
+      <div class="etiqueta">Largo plazo</div>
+      <div class="caja-bloque">
+        <div class="bloque">PER</div>
+        <div class="bloque">Sistema de Monitoreo</div>
+        <div class="bloque">Ejes Estratégicos</div>
+        <div class="bloque">Indicador largo plazo</div>
       </div>
+    </div>
 
-      <div class="bloque">
-        <div class="titulo-bloque">Mediano plazo</div>
-        <div class="item">ODS</div>
-        <div class="item">Políticas públicas</div>
-        <div class="item">PER</div>
-        <div class="item">Indicador mediano plazo</div>
+    <div class="fila">
+      <div class="etiqueta">Mediano plazo</div>
+      <div class="caja-bloque">
+        <div class="bloque">ODS</div>
+        <div class="bloque">Políticas públicas</div>
+        <div class="bloque">PER</div>
+        <div class="bloque">Indicador mediano plazo</div>
       </div>
+    </div>
 
-      <div class="bloque">
-        <div class="titulo-bloque">Corto plazo</div>
-        <div class="item">Planes de desarrollo nacional</div>
-        <div class="item">Planes de desarrollo territorial</div>
-        <div class="item">Indicador corto plazo</div>
+    <div class="fila">
+      <div class="etiqueta">Corto plazo</div>
+      <div class="caja-bloque">
+        <div class="bloque">Planes de desarrollo nacional</div>
+        <div class="bloque">Planes de desarrollo territorial</div>
+        <div class="bloque">Indicador corto plazo</div>
       </div>
-
     </div>
   </div>
+
+  <div class="ejes">Ejes transversales</div>
 
 </body>
 </html>

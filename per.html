@@ -6,147 +6,148 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f8f8fc;
+      background-color: #f9f9fc;
+      color: #2e1065;
       padding: 40px;
       text-align: center;
     }
 
     h1 {
       color: #4a148c;
+      margin-bottom: 40px;
     }
 
-    .etapa {
+    .bloque-clave {
       background-color: #ede7f6;
-      border-radius: 10px;
-      margin: 20px auto;
       padding: 15px;
+      border-radius: 12px;
+      width: fit-content;
+      margin: 0 auto 10px auto;
       font-weight: bold;
-      width: 300px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: 0.3s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    .etapa:hover {
-      background-color: #d1c4e9;
+    .flecha {
+      font-size: 20px;
+      margin: 10px 0;
+      color: gray;
     }
 
-    .bloques {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 10px;
-    }
-
-    .bloque {
+    .bloque-aportes button {
       background-color: #d4e157;
+      border: none;
+      padding: 10px 20px;
+      margin: 8px 0;
       border-radius: 8px;
-      margin: 10px;
-      padding: 12px 20px;
-      font-weight: 500;
-      width: 300px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      font-size: 14px;
+      font-weight: bold;
       cursor: pointer;
-      transition: 0.3s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      width: 280px;
     }
 
-    .bloque:hover {
-      background-color: #c0ca33;
-    }
-
-    .popup-texto {
+    .popup {
       display: none;
-      margin: 10px auto;
-      padding: 15px;
-      width: 60%;
-      background-color: #f3f3f3;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
       border: 1px solid #ccc;
-      border-radius: 8px;
-      text-align: justify;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      max-width: 400px;
+      z-index: 10;
+    }
+
+    .popup h3 {
+      margin-top: 0;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.3);
+      z-index: 5;
     }
 
     .volver {
-      margin-top: 30px;
+      margin-top: 40px;
       display: inline-block;
-      padding: 10px 20px;
       background-color: #4a148c;
       color: white;
+      padding: 10px 20px;
       text-decoration: none;
       border-radius: 8px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .volver:hover {
-      background-color: #6a1b9a;
     }
   </style>
 </head>
 <body>
 
-<h1>Cultura como Hecho Generador</h1>
+  <h1>Cultura como Hecho Generador</h1>
 
-<!-- ¿Qué es un hecho generador? -->
-<div class="popup-container">
-  <div class="etapa" onclick="togglePopup('popup-hecho')">¿Qué es un Hecho Generador?</div>
-  <div class="popup-texto" id="popup-hecho">
-    Un hecho generador es un elemento articulador que permite identificar, ordenar y proyectar apuestas estratégicas regionales a partir de un factor común. En este caso, la cultura es el hecho generador para orientar acciones regionales de desarrollo territorial.
-  </div>
-</div>
+  <div class="bloque-clave" onclick="mostrarPopup('popup1')">¿Qué es un Hecho Generador?</div>
+  <div class="flecha">↓</div>
+  <div class="bloque-clave">CULTURA COMO HECHO GENERADOR</div>
+  <div class="flecha">↓</div>
+  <div class="bloque-clave">Aportes desde la Cultura</div>
 
-<!-- ¿Qué es el PER? -->
-<div class="popup-container">
-  <div class="etapa" onclick="togglePopup('popup-per')">¿Qué es el PER?</div>
-  <div class="popup-texto" id="popup-per">
-    El Plan Estratégico Regional (PER) es el instrumento de planificación que orienta las acciones de desarrollo regional de mediano y largo plazo, promoviendo la articulación entre departamentos para fortalecer el desarrollo territorial desde un enfoque regional.
-  </div>
-</div>
-
-<!-- CULTURA COMO HECHO GENERADOR -->
-<div class="etapa">CULTURA COMO HECHO GENERADOR</div>
-
-<!-- Aportes desde la Cultura -->
-<div class="etapa">Aportes desde la Cultura</div>
-
-<div class="bloques">
-  <div class="bloque" onclick="togglePopup('popup-participacion')">Participación</div>
-  <div class="popup-texto" id="popup-participacion">
-    La cultura fortalece la participación ciudadana como elemento esencial de la construcción territorial, permitiendo el reconocimiento de voces diversas y el ejercicio de la ciudadanía activa.
+  <div class="bloque-aportes">
+    <button onclick="mostrarPopup('popup2')">Participación</button>
+    <button onclick="mostrarPopup('popup3')">Identidad Regional</button>
+    <button onclick="mostrarPopup('popup4')">Ordenamiento Territorial</button>
+    <button onclick="mostrarPopup('popup5')">Gobernanza Territorial</button>
+    <button onclick="mostrarPopup('popup6')">Proyectos Regionales</button>
   </div>
 
-  <div class="bloque" onclick="togglePopup('popup-identidad')">Identidad Regional</div>
-  <div class="popup-texto" id="popup-identidad">
-    La identidad regional es consolidada a partir del reconocimiento de las expresiones culturales, tradiciones y memorias compartidas, lo cual refuerza el sentido de pertenencia en los territorios.
+  <a href="index.html" class="volver">Volver al inicio</a>
+
+  <div class="overlay" id="overlay" onclick="cerrarPopup()"></div>
+
+  <div class="popup" id="popup1">
+    <h3>¿Qué es un Hecho Generador?</h3>
+    <p>Se refiere a un elemento clave que impulsa acciones dentro de una estructura de planificación. En este caso, la cultura es entendida como ese hecho generador que articula, moviliza e impulsa procesos territoriales.</p>
   </div>
 
-  <div class="bloque" onclick="togglePopup('popup-ordenamiento')">Ordenamiento Territorial</div>
-  <div class="popup-texto" id="popup-ordenamiento">
-    El enfoque cultural aporta al ordenamiento territorial mediante la incorporación de valores simbólicos, prácticas y saberes en la organización del espacio, reconociendo la diversidad y el patrimonio local.
+  <div class="popup" id="popup2">
+    <h3>Participación</h3>
+    <p>La cultura fomenta el reconocimiento de la participación como un derecho y potencia escenarios democráticos desde los territorios.</p>
   </div>
 
-  <div class="bloque" onclick="togglePopup('popup-gobernanza')">Gobernanza Territorial</div>
-  <div class="popup-texto" id="popup-gobernanza">
-    La cultura promueve modelos de gobernanza territorial participativa, incluyente y diferencial, articulando a los actores locales, institucionales y comunitarios.
+  <div class="popup" id="popup3">
+    <h3>Identidad Regional</h3>
+    <p>La cultura contribuye a fortalecer los sentidos de pertenencia y la construcción de la identidad regional desde el reconocimiento de la diversidad.</p>
   </div>
 
-  <div class="bloque" onclick="togglePopup('popup-proyectos')">Proyectos Regionales</div>
-  <div class="popup-texto" id="popup-proyectos">
-    Los proyectos regionales culturales potencian el desarrollo territorial, integrando iniciativas estratégicas que valoran el patrimonio, promueven el desarrollo creativo y fortalecen el tejido social.
+  <div class="popup" id="popup4">
+    <h3>Ordenamiento Territorial</h3>
+    <p>El enfoque cultural aporta a la comprensión del territorio como una construcción simbólica y no solo física, lo cual enriquece el ordenamiento territorial.</p>
   </div>
-</div>
 
-<a class="volver" href="index.html">← Volver al inicio</a>
+  <div class="popup" id="popup5">
+    <h3>Gobernanza Territorial</h3>
+    <p>Desde la cultura se promueven formas de gestión y articulación institucional que fortalecen la gobernanza y la planeación participativa.</p>
+  </div>
 
-<script>
-  function togglePopup(id) {
-    var popup = document.getElementById(id);
-    if (popup.style.display === "none" || popup.style.display === "") {
-      popup.style.display = "block";
-    } else {
-      popup.style.display = "none";
+  <div class="popup" id="popup6">
+    <h3>Proyectos Regionales</h3>
+    <p>La cultura actúa como catalizador para el desarrollo de proyectos regionales sostenibles y pertinentes desde una perspectiva territorial.</p>
+  </div>
+
+  <script>
+    function mostrarPopup(id) {
+      document.getElementById('overlay').style.display = 'block';
+      document.getElementById(id).style.display = 'block';
     }
-  }
-</script>
+    function cerrarPopup() {
+      document.getElementById('overlay').style.display = 'none';
+      let popups = document.querySelectorAll('.popup');
+      popups.forEach(p => p.style.display = 'none');
+    }
+  </script>
 
 </body>
 </html>

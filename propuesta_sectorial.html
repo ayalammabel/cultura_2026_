@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Alineación de la Planeación Estratégica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8fc;
+      padding: 20px;
+      margin: 0;
+      font-size: 18px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #4a148c;
+      font-size: 26px;
+    }
+
+    .contenedor {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .ejes-vertical {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-weight: bold;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4a148c;
+      font-size: 18px;
+    }
+
+    .ejes-vertical a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .ejes-vertical a:hover {
+      color: #000;
+      font-weight: bold;
+    }
+
+    .tabla {
+      display: table;
+      border-collapse: separate;
+      border-spacing: 20px 12px;
+    }
+
+    .fila {
+      display: table-row;
+    }
+
+    .etiqueta {
+      display: table-cell;
+      font-weight: bold;
+      color: #4a148c;
+      vertical-align: middle;
+      text-align: center;
+      padding: 15px;
+      border-radius: 12px;
+      min-width: 150px;
+      font-size: 18px;
+    }
+
+    .caja-bloque {
+      display: table-cell;
+      border-radius: 12px;
+      padding: 15px 25px;
+      vertical-align: top;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      min-width: 300px;
+    }
+
+    .bloque {
+      margin-bottom: 12px;
+      border-radius: 10px;
+      padding: 16px 10px;
+      text-align: center;
+      font-size: 17px;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+    }
+
+    .bloque a {
+      text-decoration: none;
+      color: #000;
+      display: block;
+    }
+
+    .bloque a:hover {
+      color: #4a148c;
+      font-weight: bold;
+    }
+
+    /* Colores por categoría */
+    .ejes-transversales {
+      background-color: #e1bee7;
+    }
+
+    .sistema-monitoreo {
+      background-color: #b3e5fc;
+    }
+
+    .largo {
+      background-color: #dcedc8;
+    }
+
+    .mediano {
+      background-color: #fff9c4;
+    }
+
+    .corto {
+      background-color: #ffe0b2;
+    }
+
+    /* Botones combinados con su fondo */
+    .bloque.largo {
+      background-color: #f1f8e9;
+    }
+
+    .bloque.mediano {
+      background-color: #fffde7;
+    }
+
+    .bloque.corto {
+      background-color: #fff3e0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Alineación de la Planeación Estratégica</h1>
+
+  <div class="contenedor">
+    <!-- Ejes Transversales -->
+    <div class="ejes-vertical ejes-transversales">
+      <a href="ejes_.html">Identidad y Arraigo Cultural y Patrimonial</a>
+    </div>
+    
+    <div class="contenedor">
+    <!-- Ejes Transversales -->
+    <div class="ejes-vertical ejes-transversales">
+      <a href="ejes_.html">Autonomía regional</a>
+    </div>
+
+    <!-- Tabla central -->
+    <div class="tabla">
+      <div class="fila">
+        <div class="etiqueta largo">Largo plazo</div>
+        <div class="caja-bloque largo">
+          <div class="bloque largo"><a href="per.html">Plan Estratégico Regional - PER</a></div>
+        </div>
+      </div>
+
+      <div class="fila">
+        <div class="etiqueta mediano">Mediano plazo</div>
+        <div class="caja-bloque mediano">
+          <div class="bloque mediano"><a href="ods.html">Objetivos de Desarrollo Sostenible - ODS</a></div>
+          <div class="bloque mediano">Políticas públicas</div>
+          <div class="bloque mediano">Plan de Ordenamiento Territorial - POT</div>
+        </div>
+      </div>
+
+      <div class="fila">
+        <div class="etiqueta corto">Corto plazo</div>
+        <div class="caja-bloque corto">
+          <div class="bloque corto">Planes de Desarrollo Nacional - PND</div>
+          <div class="bloque corto">Planes de Desarrollo Territorial - PDT</div>
+          <div class="bloque corto">Planes de Desarrollo Municipal</div>
+          <div class="bloque corto"><a href="ejes_transversales.html">Ejes Estratégicos</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sistema de Monitoreo -->
+    <div class="ejes-vertical sistema-monitoreo">
+      <a href="sistema_monitoreo.html">Ecosistema de Conocimiento</a>
+    </div>
+  </div>
+
+</body>
+</html>
+

@@ -18,54 +18,62 @@
     }
 
     .sidebar {
-      width: 150px;
+      width: 120px;
       background-color: #d9c8ef;
       color: #4b0082;
       writing-mode: vertical-rl;
       text-align: center;
       padding: 2rem 0;
       font-weight: bold;
-      font-size: 1.1rem;
-      border-right: 3px solid #bba5e0;
+      font-size: 1rem;
+      border-right: 2px solid #bba5e0;
     }
 
     .main-content {
       flex: 1;
-      padding: 2rem;
+      padding: 3rem 4rem;
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .section {
+      width: 100%;
+      max-width: 900px;
     }
 
     .section-title {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: bold;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      color: #4a148c;
+      text-align: left;
     }
 
-    .grid-horizontal {
+    .grid-horizontal, .grid-vertical {
       display: flex;
       gap: 1.5rem;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .grid-vertical {
-      display: flex;
       flex-direction: column;
-      gap: 1rem;
+      align-items: stretch;
     }
 
     .card {
       background-color: #ffffff;
-      padding: 1.5rem;
+      padding: 1.2rem 2rem;
       border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
       text-align: center;
       font-weight: bold;
       transition: transform 0.2s ease;
       text-decoration: none;
       color: inherit;
-      min-width: 180px;
+      min-width: 220px;
     }
 
     .card:hover {
@@ -74,9 +82,8 @@
     }
 
     .purple-button {
-      margin-top: 3rem;
-      display: inline-block;
-      padding: 0.8rem 1.6rem;
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
       background-color: #6a1b9a;
       color: #fff;
       border: none;
@@ -98,7 +105,8 @@
     </div>
 
     <div class="main-content">
-      <div>
+
+      <div class="section">
         <div class="section-title">Arquitectura institucional</div>
         <div class="grid-horizontal">
           <a href="arquitectura_institucional.html" class="card" style="background-color: #e3f2fd;">Arquitectura institucional</a>
@@ -107,9 +115,9 @@
         </div>
       </div>
 
-      <div>
+      <div class="section">
         <div class="section-title">Sectores culturales</div>
-        <div class="grid-vertical">
+        <div class="grid-horizontal">
           <a href="cultura.html" class="card" style="background-color: #f3e5f5;">Cultura</a>
           <a href="patrimonio.html" class="card" style="background-color: #ede7f6;">Patrimonio</a>
           <a href="deporte.html" class="card" style="background-color: #fff8e1;">Deporte</a>
@@ -117,6 +125,7 @@
       </div>
 
       <a href="index.html" class="purple-button">⬅ Volver al inicio</a>
+
     </div>
   </div>
 </body>

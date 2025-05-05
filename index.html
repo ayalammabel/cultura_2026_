@@ -1,91 +1,84 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cultura 2026 – Ejes Principales</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cultura 2026 - Ejes Principales</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f7f7f7;
+      background-color: #fff;
       margin: 0;
-      padding: 0;
+      padding: 2rem;
+      text-align: center;
     }
 
     h1 {
-      text-align: center;
-      margin-top: 40px;
       color: #333;
+      margin-bottom: 2rem;
     }
 
-    .contenedor-ejes {
+    .card-container {
       display: flex;
       justify-content: center;
-      gap: 30px;
-      margin: 50px auto;
-      max-width: 1000px;
+      gap: 2rem;
       flex-wrap: wrap;
     }
 
-    .tarjeta-eje {
-      background: white;
+    .card {
+      width: 200px;
+      border: 10px solid #ddd;
       border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      padding: 25px 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      background-color: #fafafa;
       text-align: center;
-      width: 250px;
-      transition: transform 0.2s;
+      transition: transform 0.2s ease;
+      text-decoration: none;
+      color: inherit;
     }
 
-    .tarjeta-eje:hover {
-      transform: translateY(-5px);
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
-    .tarjeta-eje img {
-      width: 60px;
-      height: auto;
-      margin-bottom: 15px;
+    .card img {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 1rem;
     }
 
-    .titulo-eje {
-      font-size: 18px;
-      color: #333;
+    .card-title {
       font-weight: bold;
-    }
-
-    @media screen and (max-width: 768px) {
-      .contenedor-ejes {
-        flex-direction: column;
-        align-items: center;
-      }
+      font-size: 1.1rem;
     }
   </style>
 </head>
 <body>
 
-  <h1>Ejes principales de la propuesta cultural</h1>
+  <h1>Ejes estratégicos de la propuesta cultural</h1>
 
-  <div class="contenedor-ejes">
-    <!-- Tarjeta 1 -->
-    <div class="tarjeta-eje">
-      <img src=filosofia_politica.jpg" alt="Filosofía política">
-      <div class="titulo-eje">Filosofía política</div>
-    </div>
+  <div class="card-container">
+    
+    <a href="filosofia_politica.html" class="card">
+      <img src="img/filosofia.png" alt="Filosofía política">
+      <div class="card-title">Filosofía política</div>
+    </a>
 
-    <!-- Tarjeta 2 -->
-    <div class="tarjeta-eje">
-      <img src="contenido_programatico.png" alt="Contenido programático">
-      <div class="titulo-eje">Contenido programático</div>
-    </div>
+    <a href="contenido_programatico.html" class="card">
+      <img src="img/contenido.png" alt="Contenido programático">
+      <div class="card-title">Contenido programático</div>
+    </a>
 
-    <!-- Tarjeta 3 -->
-    <div class="tarjeta-eje">
-      <img src="propuesta_sectorial.png" alt="Propuesta sectorial">
-      <div class="titulo-eje">Propuesta sectorial</div>
-    </div>
+    <a href="propuesta_sectorial.html" class="card">
+      <img src="img/sectorial.png" alt="Propuesta sectorial">
+      <div class="card-title">Propuesta sectorial</div>
+    </a>
+
   </div>
 
 </body>
 </html>
+
 

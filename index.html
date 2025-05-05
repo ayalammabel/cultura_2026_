@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cultura 2026 - Ejes Principales</title>
+  <title>Culturas Diversas, Regiones Vivas</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
       margin: 0;
       padding: 2rem;
       text-align: center;
@@ -15,43 +15,48 @@
 
     h1 {
       color: #333;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
 
     .card-container {
       display: flex;
       justify-content: center;
-      gap: 2rem;
       flex-wrap: wrap;
+      gap: 2rem;
     }
 
     .card {
-      width: 200px;
-      border: 10px solid #ddd;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      background-color: #fafafa;
+      width: 300px;
+      border-radius: 16px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
       text-align: center;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
       text-decoration: none;
       color: inherit;
     }
 
     .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
     .card img {
-      width: 64px;
-      height: 64px;
+      width: 72px;
+      height: 72px;
       margin-bottom: 1rem;
     }
 
     .card-title {
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-description {
+      font-size: 0.95rem;
+      color: #666;
     }
   </style>
 </head>
@@ -64,21 +69,25 @@
     <a href="filosofia_politica.html" class="card">
       <img src="img/filosofia.png" alt="Filosofía política">
       <div class="card-title">Filosofía política</div>
+      <div class="card-description">Visión ética, social y territorial que orienta la política cultural.</div>
     </a>
 
     <a href="contenido_programatico.html" class="card">
       <img src="img/contenido.png" alt="Contenido programático">
       <div class="card-title">Contenido programático</div>
+      <div class="card-description">Ejes y apuestas del plan de gobierno con enfoque en cultura.</div>
     </a>
 
     <a href="propuesta_sectorial.html" class="card">
       <img src="img/sectorial.png" alt="Propuesta sectorial">
       <div class="card-title">Propuesta sectorial</div>
+      <div class="card-description">Proyectos estratégicos en cultura, patrimonio y deporte.</div>
     </a>
 
   </div>
 
 </body>
 </html>
+
 
 

@@ -10,15 +10,20 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #f8f8f8;
       color: #333;
-      display: flex;
-      justify-content: center;
     }
 
     .container {
       display: flex;
-      flex-direction: row;
-      min-height: 100vh;
+      flex-direction: column;
+      align-items: center;
       padding: 3rem 2rem;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
       gap: 4rem;
     }
 
@@ -27,7 +32,6 @@
       flex-direction: column;
       align-items: center;
       gap: 2rem;
-      justify-content: center;
     }
 
     .card {
@@ -84,28 +88,30 @@
 </head>
 <body>
   <div class="container">
+    <div class="row">
+      <!-- Columna: Arquitectura institucional -->
+      <div class="column">
+        <a href="arquitectura_institucional.html" class="card" style="background-color: #e3f2fd;">Arquitectura institucional</a>
+        <a href="presupuesto.html" class="card" style="background-color: #e8f5e9;">Presupuesto</a>
+        <a href="datos.html" class="card" style="background-color: #fff3e0;">Datos</a>
+      </div>
 
-    <!-- Columna: Arquitectura institucional -->
-    <div class="column">
-      <a href="arquitectura_institucional.html" class="card" style="background-color: #e3f2fd;">Arquitectura institucional</a>
-      <a href="presupuesto.html" class="card" style="background-color: #e8f5e9;">Presupuesto</a>
-      <a href="datos.html" class="card" style="background-color: #fff3e0;">Datos</a>
+      <!-- Ejes estratégicos vertical -->
+      <div class="etiqueta">
+        Ejes estratégicos
+      </div>
+
+      <!-- Columna: Sectores culturales -->
+      <div class="column">
+        <a href="cultura.html" class="card" style="background-color: #f3e5f5;">Cultura</a>
+        <a href="patrimonio.html" class="card" style="background-color: #ede7f6;">Patrimonio</a>
+        <a href="deporte.html" class="card" style="background-color: #fff8e1;">Deporte</a>
+      </div>
     </div>
 
-    <!-- Ejes estratégicos vertical -->
-    <div class="etiqueta">
-      Ejes estratégicos
-    </div>
-
-    <!-- Columna: Sectores culturales -->
-    <div class="column">
-      <a href="cultura.html" class="card" style="background-color: #f3e5f5;">Cultura</a>
-      <a href="patrimonio.html" class="card" style="background-color: #ede7f6;">Patrimonio</a>
-      <a href="deporte.html" class="card" style="background-color: #fff8e1;">Deporte</a>
-
-      <a href="index.html" class="purple-button">⬅ Volver al inicio</a>
-    </div>
-
+    <!-- Botón volver al inicio -->
+    <a href="index.html" class="purple-button">⬅ Volver al inicio</a>
   </div>
 </body>
 </html>
+

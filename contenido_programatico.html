@@ -36,14 +36,13 @@
     }
 
     .card {
-      background-color: #ffffff;
       padding: 2rem 3rem;
       border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       text-align: center;
       font-weight: bold;
       text-decoration: none;
-      color: inherit;
+      color: #222;
       width: 360px;
       font-size: 20px;
       transition: transform 0.2s ease;
@@ -53,11 +52,19 @@
       transform: translateY(-3px);
     }
 
+    /* Nuevos colores profesionales */
+    .card.blue { background-color: #dbeeff; }
+    .card.green { background-color: #e0f3ea; }
+    .card.orange { background-color: #fff0d6; }
+    .card.pink { background-color: #f4e1f5; }
+    .card.violet { background-color: #ece7f8; }
+    .card.yellow { background-color: #fef8dd; }
+
     .etiqueta {
       writing-mode: vertical-rl;
       transform: rotate(180deg);
-      background-color: #d9c8ef;
-      color: #4b0082;
+      background-color: #ded2f7;
+      color: #4a148c;
       font-weight: bold;
       font-size: 1.3rem;
       padding: 1.5rem;
@@ -67,35 +74,29 @@
       align-items: center;
       justify-content: center;
       height: auto;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
     }
 
-    .extra-buttons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 3rem;
-      gap: 1.5rem;
+    .etiqueta:hover {
+      background-color: #c3b6e4;
     }
 
-    .secondary-button {
-      padding: 1rem 2.5rem;
+    .purple-button {
+      margin-top: 4rem;
+      padding: 1.2rem 3rem;
       background-color: #6a1b9a;
       color: #fff;
       border: none;
-      border-radius: 10px;
-      font-size: 1rem;
+      border-radius: 12px;
+      font-size: 1.2rem;
       font-weight: bold;
       text-decoration: none;
       transition: background 0.3s ease;
     }
 
-    .secondary-button:hover {
+    .purple-button:hover {
       background-color: #4a148c;
-    }
-
-    .volver-button {
-      font-size: 0.95rem;
-      padding: 0.8rem 2rem;
     }
   </style>
 </head>
@@ -104,19 +105,28 @@
     <div class="row">
       <!-- Columna izquierda -->
       <div class="column">
-        <a href="arquitectura_institucional.html" class="card" style="background-color: #e3f2fd;">Arquitectura institucional</a>
-        <a href="presupuesto.html" class="card" style="background-color: #e8f5e9;">Presupuesto</a>
-        <a href="datos.html" class="card" style="background-color: #fff3e0;">Datos Relevantes</a>
+        <a href="arquitectura_institucional.html" class="card blue">Arquitectura institucional</a>
+        <a href="presupuesto.html" class="card green">Presupuesto</a>
+        <a href="datos.html" class="card orange">Datos Relevantes</a>
       </div>
 
-      <!-- Etiqueta vertical -->
-      <div class="etiqueta">Ejes estratégicos</div>
+      <!-- Ejes estratégicos como enlace -->
+      <a href="ejes_transversales.html" class="etiqueta">Ejes estratégicos</a>
 
       <!-- Columna derecha -->
       <div class="column">
-        <a href="cultura.html" class="card" style="background-color: #f3e5f5;">Cultura</a>
-        <a href="patrimonios.html" class="card" style="background-color: #ede7f6;">Patrimonios</a>
-        <a href="deporte.html" class="card" style="background-color: #fff8e1;">Deporte</a>
+        <a href="cultura.html" class="card pink">Cultura</a>
+        <a href="patrimonios.html" class="card violet">Patrimonios</a>
+        <a href="deporte.html" class="card yellow">Deporte</a>
+      </div>
+    </div>
+
+    <!-- Botón volver al inicio -->
+    <a href="index.html" class="purple-button">⬅ Volver al inicio</a>
+  </div>
+</body>
+</html>
+
 
 
 

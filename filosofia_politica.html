@@ -19,73 +19,52 @@
     h1 {
       color: #4a148c;
       font-size: 28px;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       text-align: center;
     }
 
-    .intro {
-      font-weight: bold;
-      background-color: #ede7f6;
-      padding: 1rem 2rem;
-      border-radius: 12px;
-      font-size: 20px;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .accordion {
+    .contenedor {
       width: 100%;
       max-width: 800px;
-    }
-
-    .accordion-item {
-      background-color: #fff;
-      margin-bottom: 1rem;
-      border-radius: 10px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
+      margin-bottom: 3rem;
     }
 
-    .accordion-header {
+    .cabecera {
       background-color: #d1c4e9;
       padding: 1rem 1.5rem;
       font-weight: bold;
-      cursor: pointer;
       font-size: 18px;
+      color: #2e1065;
     }
 
-    .accordion-content {
-      display: none;
-      padding: 1rem 1.5rem;
+    .contenido {
+      padding: 1.5rem;
       background-color: #f9f9ff;
+    }
+
+    .contenido ul {
+      padding-left: 1.5rem;
+    }
+
+    .contenido li {
+      margin-bottom: 12px;
       font-size: 17px;
-      line-height: 1.6;
-    }
-
-    .accordion-content ul {
-      padding-left: 1.2rem;
-    }
-
-    .accordion-content li {
-      margin-bottom: 10px;
-    }
-
-    .accordion-item.active .accordion-content {
-      display: block;
     }
 
     .volver {
-      margin-top: 3rem;
-      padding: 1rem 2.5rem;
+      margin-top: 1rem;
+      padding: 0.6rem 1.5rem;
       background-color: #6a1b9a;
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      font-size: 1.1rem;
-      font-weight: bold;
+      color: white;
       text-decoration: none;
-      transition: background 0.3s ease;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background-color 0.3s;
     }
 
     .volver:hover {
@@ -97,36 +76,24 @@
 
   <h1>Filosofía Política</h1>
 
-  <div class="accordion">
-    <!-- Cultura -->
-    <div class="accordion-item">
-      <div class="accordion-header"> Punto de partida: cultura, deporte y territorio.</div>
-      <div class="accordion-content">
-        <ul>
-          <li>La cultura es un pilar para cuidar la vida, la diversidad y el territorio. Una cultura viva y participativa es una cultura que protege y cuida sus territorios.</li>
-          <li>La cultura es un activo potencial de riqueza simbólica, económica y social para los territorios.</li>
-          <li>La cultura genera valor, arraigo, identidad.</li>
-          <li>La cultura como medio para la lectura territorial regional.</li>
-          <li>El deporte es un indicador de prosperidad local y nacional.</li>
-          <li>El deporte es un medio de adaptación territorial. Minimiza la tendencia al conflicto y define patrones culturales de sana competencia y salud pública.</li>
-        </ul>
-      </div>
+  <div class="contenedor">
+    <div class="cabecera">Punto de partida: cultura, deporte y territorio.</div>
+    <div class="contenido">
+      <ul>
+        <li>La cultura es un pilar para cuidar la vida, la diversidad y el territorio. Una cultura viva y participativa es una cultura que protege y cuida sus territorios.</li>
+        <li>La cultura es un activo potencial de riqueza simbólica, económica y social para los territorios.</li>
+        <li>La cultura genera valor, arraigo, identidad.</li>
+        <li>La cultura como medio para la lectura territorial regional.</li>
+        <li>El deporte es un indicador de prosperidad local y nacional.</li>
+        <li>El deporte es un medio de adaptación territorial. Minimiza la tendencia al conflicto y define patrones culturales de sana competencia y salud pública.</li>
+      </ul>
     </div>
+  </div>
 
-
-  <!-- Botón volver al inicio -->
   <a href="index.html" class="volver">⬅ Volver al inicio</a>
 
-  <script>
-    const headers = document.querySelectorAll('.accordion-header');
-    headers.forEach(header => {
-      header.addEventListener('click', () => {
-        const item = header.parentElement;
-        item.classList.toggle('active');
-      });
-    });
-  </script>
 </body>
 </html>
+
 
 

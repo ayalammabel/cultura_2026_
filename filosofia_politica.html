@@ -2,123 +2,78 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Filosofía Política</title>
+  <title>Filosofía política</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9fb;
+      margin: 0;
+      padding: 3rem;
+      background-color: #f9f9f9;
       color: #333;
-      padding: 40px;
-      line-height: 1.6;
-      text-align: center;
     }
 
     h1 {
-      color: #4a148c;
-      margin-bottom: 10px;
+      text-align: center;
+      color: #6a1b9a;
+      margin-bottom: 2rem;
     }
 
-    .subtitulo {
-      font-size: 1.2rem;
-      color: #555;
-      margin-bottom: 40px;
+    .cita-central {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.3rem;
+      font-style: italic;
+      text-align: center;
+      border-left: 6px solid #ba68c8;
+      padding: 1.5rem 2rem;
+      background-color: #f3e5f5;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .matriz {
+    .contenedor-frases {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
-      margin-bottom: 50px;
-      flex-wrap: wrap;
+      margin-top: 3rem;
     }
 
-    .columna {
-      flex: 1;
-      min-width: 250px;
-      background-color: white;
+    .frase {
+      flex: 1 1 250px;
+      background-color: #ede7f6;
+      padding: 1.2rem;
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 20px;
-    }
-
-    .columna h2 {
-      font-size: 1.3rem;
-      color: white;
-      padding: 10px;
-      border-radius: 10px;
-    }
-
-    .cultura h2 {
-      background-color: #ba68c8;
-    }
-
-    .patrimonio h2 {
-      background-color: #f6ae2d;
-    }
-
-    .deporte h2 {
-      background-color: #81c784;
-    }
-
-    .columna ul {
-      text-align: left;
-      margin-top: 1rem;
-    }
-
-    .columna ul li {
-      margin-bottom: 0.8rem;
-    }
-
-    .destacado {
-      font-size: 1.2rem;
-      color: #333;
-      max-width: 800px;
-      margin: 40px auto 0;
+      text-align: center;
       font-weight: bold;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .frase:hover {
+      transform: scale(1.02);
+      background-color: #e1bee7;
     }
   </style>
 </head>
 <body>
 
-  <h1>Filosofía Política</h1>
-  <div class="subtitulo">Determinantes culturales del territorio</div>
+  <h1>Filosofía política</h1>
 
-  <div class="matriz">
-    <div class="columna cultura">
-      <h2>Cultura</h2>
-      <ul>
-        <li>Pilar para cuidar la vida y el territorio.</li>
-        <li>Genera valor simbólico, social y económico.</li>
-        <li>Motor del tejido social e identidad nacional.</li>
-        <li>Herramienta de lectura del territorio regional.</li>
-      </ul>
-    </div>
-
-    <div class="columna patrimonio">
-      <h2>Patrimonio</h2>
-      <ul>
-        <li>Condición para planificar el territorio.</li>
-        <li>Síntesis de la ciudad como experiencia vivida.</li>
-        <li>Memoria, historia y sentido de lo propio.</li>
-        <li>Reconstruye tejidos sociales y la convivencia.</li>
-      </ul>
-    </div>
-
-    <div class="columna deporte">
-      <h2>Deporte</h2>
-      <ul>
-        <li>Indicador de prosperidad local y salud pública.</li>
-        <li>Motor de economías locales.</li>
-        <li>Visibiliza identidad cultural y diversidad.</li>
-        <li>Estrategia para la paz y la transformación social.</li>
-      </ul>
-    </div>
+  <div class="cita-central">
+    "La cultura es un pilar para cuidar la vida, la diversidad y el territorio. Una cultura viva y participativa protege y cuida sus territorios."
   </div>
 
-  <div class="destacado">
-    "El territorio no solo se planifica: se vive. La cultura, el patrimonio y el deporte son pilares que organizan, tejen y proyectan la vida colectiva."
+  <div class="contenedor-frases">
+    <div class="frase">La cultura genera valor, arraigo e identidad.</div>
+    <div class="frase">El deporte es un indicador de prosperidad y adaptación territorial.</div>
+    <div class="frase">La cultura como medio para la lectura territorial regional.</div>
+    <div class="frase">El patrimonio es hábitat biocultural y fuente de memoria.</div>
+    <div class="frase">La cultura construye ciudadanía y democracia local.</div>
+    <div class="frase">La planificación cultural fortalece el sentido de lo propio.</div>
+    <div class="frase">El deporte transforma conflictos y reconfigura el espacio público.</div>
   </div>
 
 </body>
 </html>
+

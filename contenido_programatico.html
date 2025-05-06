@@ -52,13 +52,14 @@
       transform: translateY(-3px);
     }
 
-    /* Nuevos colores profesionales */
+    /* Colores profesionales */
     .card.blue { background-color: #dbeeff; }
     .card.green { background-color: #e0f3ea; }
     .card.orange { background-color: #fff0d6; }
     .card.pink { background-color: #f4e1f5; }
     .card.violet { background-color: #ece7f8; }
     .card.yellow { background-color: #fef8dd; }
+    .card.gray { background-color: #ede7f6; }
 
     .etiqueta {
       writing-mode: vertical-rl;
@@ -82,22 +83,42 @@
       background-color: #c3b6e4;
     }
 
-    .purple-button {
-      margin-top: 4rem;
-      padding: 1.2rem 3rem;
-      background-color: #6a1b9a;
-      color: #fff;
-      border: none;
-      border-radius: 12px;
-      font-size: 1.2rem;
+    .extra-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
+      gap: 1.2rem;
+    }
+
+    .purple-button,
+    .gray-button {
+      padding: 0.9rem 2rem;
+      font-size: 1rem;
       font-weight: bold;
+      border-radius: 10px;
       text-decoration: none;
-      transition: background 0.3s ease;
+      transition: 0.3s ease;
+    }
+
+    .purple-button {
+      background-color: #6a1b9a;
+      color: white;
     }
 
     .purple-button:hover {
       background-color: #4a148c;
     }
+
+    .gray-button {
+      background-color: #d1c4e9;
+      color: #4a148c;
+    }
+
+    .gray-button:hover {
+      background-color: #b39ddb;
+    }
+
   </style>
 </head>
 <body>
@@ -110,7 +131,7 @@
         <a href="datos.html" class="card orange">Datos Relevantes</a>
       </div>
 
-      <!-- Ejes estratégicos como enlace -->
+      <!-- Ejes estratégicos -->
       <a href="ejes_transversales.html" class="etiqueta">Ejes estratégicos</a>
 
       <!-- Columna derecha -->
@@ -121,11 +142,15 @@
       </div>
     </div>
 
-    <!-- Botón volver al inicio -->
-    <a href="index.html" class="purple-button">⬅ Volver al inicio</a>
+    <!-- Botón extra (Normativas) + Volver -->
+    <div class="extra-buttons">
+      <a href="normativas.html" class="gray-button">📄 Normativas</a>
+      <a href="index.html" class="purple-button">⬅ Volver al inicio</a>
+    </div>
   </div>
 </body>
 </html>
+
 
 
 

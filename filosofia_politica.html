@@ -1,79 +1,145 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Filosofía política</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filosofía Política</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 3rem;
-      background-color: #f9f9f9;
+      background-color: #f5f5fc;
       color: #333;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     h1 {
+      color: #4a148c;
+      font-size: 28px;
+      margin-bottom: 1rem;
       text-align: center;
-      color: #6a1b9a;
-      margin-bottom: 2rem;
     }
 
-    .cita-central {
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 1.3rem;
-      font-style: italic;
-      text-align: center;
-      border-left: 6px solid #ba68c8;
-      padding: 1.5rem 2rem;
-      background-color: #f3e5f5;
-      border-radius: 8px;
+    .intro {
+      font-weight: bold;
+      background-color: #ede7f6;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-size: 20px;
+      margin-bottom: 2rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .contenedor-frases {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 3rem;
+    .accordion {
+      width: 100%;
+      max-width: 800px;
     }
 
-    .frase {
-      flex: 1 1 250px;
-      background-color: #ede7f6;
-      padding: 1.2rem;
-      border-radius: 12px;
-      text-align: center;
+    .accordion-item {
+      background-color: #fff;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .accordion-header {
+      background-color: #d1c4e9;
+      padding: 1rem 1.5rem;
       font-weight: bold;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
+      cursor: pointer;
+      font-size: 18px;
     }
 
-    .frase:hover {
-      transform: scale(1.02);
-      background-color: #e1bee7;
+    .accordion-content {
+      display: none;
+      padding: 1rem 1.5rem;
+      background-color: #f9f9ff;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .accordion-content ul {
+      padding-left: 1.2rem;
+    }
+
+    .accordion-content li {
+      margin-bottom: 10px;
+    }
+
+    .accordion-item.active .accordion-content {
+      display: block;
+    }
+
+    .volver {
+      margin-top: 3rem;
+      padding: 1rem 2.5rem;
+      background-color: #6a1b9a;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .volver:hover {
+      background-color: #4a148c;
     }
   </style>
 </head>
 <body>
 
-  <h1>Filosofía política</h1>
+  <h1>Filosofía Política</h1>
 
-  <div class="cita-central">
-    "La cultura es un pilar para cuidar la vida, la diversidad y el territorio. Una cultura viva y participativa protege y cuida sus territorios."
+  <div class="intro">
+    Punto de partida: cultura, deporte y territorio.
   </div>
 
-  <div class="contenedor-frases">
-    <div class="frase">La cultura genera valor, arraigo e identidad.</div>
-    <div class="frase">El deporte es un indicador de prosperidad y adaptación territorial.</div>
-    <div class="frase">La cultura como medio para la lectura territorial regional.</div>
-    <div class="frase">El patrimonio es hábitat biocultural y fuente de memoria.</div>
-    <div class="frase">La cultura construye ciudadanía y democracia local.</div>
-    <div class="frase">La planificación cultural fortalece el sentido de lo propio.</div>
-    <div class="frase">El deporte transforma conflictos y reconfigura el espacio público.</div>
+  <div class="accordion">
+    <!-- Cultura -->
+    <div class="accordion-item">
+      <div class="accordion-header">¿Qué estamos entendiendo por cultura?</div>
+      <div class="accordion-content">
+        <ul>
+          <li>La cultura es un pilar para cuidar la vida, la diversidad y el territorio. Una cultura viva y participativa es una cultura que protege y cuida sus territorios.</li>
+          <li>La cultura es un activo potencial de riqueza simbólica, económica y social para los territorios.</li>
+          <li>La cultura genera valor, arraigo, identidad.</li>
+          <li>La cultura como medio para la lectura territorial regional.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Deporte -->
+    <div class="accordion-item">
+      <div class="accordion-header">¿Qué estamos entendiendo por deporte?</div>
+      <div class="accordion-content">
+        <ul>
+          <li>El deporte es un indicador de prosperidad local y nacional.</li>
+          <li>El deporte es un medio de adaptación territorial. Minimiza la tendencia al conflicto y define patrones culturales de sana competencia y salud pública.</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
+  <!-- Botón volver al inicio -->
+  <a href="index.html" class="volver">⬅ Volver al inicio</a>
+
+  <script>
+    const headers = document.querySelectorAll('.accordion-header');
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
 </body>
 </html>
+
 

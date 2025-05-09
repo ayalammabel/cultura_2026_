@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -61,28 +61,28 @@
       font-weight: bold;
       color: #333;
     }
+
+    .image-container {
+      max-width: 95%;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
 
   <h1>Datos Relevantes del Patrimonio y la Cultura en Colombia</h1>
-
-  <div class="section">
-    <h2>📊 Datos Económicos y Presupuestales Clave</h2>
-    <ul>
-      <li>📈 El presupuesto público para cultura aumentó un <strong>236%</strong> entre 2002 y 2022, con un salto del <strong>53%</strong> entre 2020 y 2021 (hasta COP 615.000 millones). Sin embargo, sigue siendo inferior al promedio iberoamericano (<strong>menos del 0.05% del PIB</strong>).</li>
-      <li>💰 En 2022, la <strong>economía cultural y creativa</strong> aportó <strong>$35.8 billones</strong>, representando el <strong>2,7% del PIB nacional</strong>. Se estima un potencial de hasta <strong>$28 billones</strong>.</li>
-      <li>📊 El valor agregado de la economía cultural creció <strong>3,4%</strong> en 2023 frente a 2022.</li>
-      <li>📌 En el período 2014-2023, el valor agregado del sector representó en promedio el <strong>3,0%</strong> del total nacional.</li>
-      <li>📦 Distribución del valor agregado: <strong>Creaciones Funcionales (47,8%)</strong>, <strong>Artes y Patrimonio (28,8%)</strong> e <strong>Industrias Culturales (23,4%)</strong>.</li>
-      <li>👥 En 2023, los ocupados en el sector cultural crecieron <strong>6,6%</strong> frente a 2022.</li>
-      <li>🎟️ La <strong>Ley de Espectáculos Públicos (LEP)</strong> recaudó <strong>$78.801 millones</strong> en 2023. Bogotá, Medellín y Cota representaron el <strong>77,5%</strong> del total.</li>
-      <li>🎫 Los eventos de espectáculos públicos crecieron <strong>22,6%</strong> en 2023, pasando de <strong>15.869</strong> a <strong>19.462</strong>.</li>
-      <li>🎬 Recursos para proyectos cinematográficos reconocidos crecieron un <strong>41,6%</strong> en 2023, alcanzando <strong>$71.191 millones</strong>.</li>
-      <li>🎥 El Fondo para el Desarrollo Cinematográfico (FDC) recaudó <strong>$33.962 millones</strong> en 2023, un <strong>35,3%</strong> más que en 2022.</li>
-      <li>🚀 Para 2025 se prevén <strong>COP 87.906 millones</strong> para <strong>3.003 proyectos</strong> culturales en <strong>662 municipios</strong> (≈30 millones en promedio por estímulo).</li>
-    </ul>
-  </div>
 
   <div class="section">
     <h2>🎓 Instituciones de Educación Superior</h2>
@@ -92,6 +92,14 @@
   <div class="section">
     <h2>🏛️ Vigías del Patrimonio</h2>
     <p><span class="highlight">350 Organizaciones</span> de Vigías del Patrimonio están distribuidas en <span class="highlight">27 departamentos</span> del país, fomentando la protección cultural desde lo local.</p>
+  </div>
+
+  <!-- Mapa agregado -->
+  <div class="section">
+    <h2>🗺️ Mapa de Patrimonios en Colombia</h2>
+    <div class="image-container">
+      <img src="mapa_patrimonio.png" alt="Mapa de patrimonios en Colombia">
+    </div>
   </div>
 
   <div class="section">
@@ -129,7 +137,8 @@
     </ul>
   </div>
 
-  <a class="volver" href="contenido_programatico.html">⬅ Volver al contenido programático</a>
+  <a href="contenido_programatico.html" class="volver">⬅ Volver al contenido</a>
+
 </body>
 </html>
 

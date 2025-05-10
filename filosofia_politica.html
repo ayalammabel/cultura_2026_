@@ -70,6 +70,48 @@
     .volver:hover {
       background-color: #4a148c;
     }
+
+    .dimensiones {
+      background-color: #ede7f6;
+      padding: 1rem;
+      border-radius: 12px;
+      margin-top: 2rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .botones {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .boton {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .boton.intrinseca {
+      background-color: #c8e6c9;
+      color: #1b5e20;
+    }
+
+    .boton.instrumental {
+      background-color: #d1c4e9;
+      color: #4a148c;
+    }
+
+    .boton:hover {
+      opacity: 0.85;
+    }
   </style>
 </head>
 <body>
@@ -90,10 +132,13 @@
     </div>
   </div>
 
+  <div class="dimensiones">Dimensiones Culturales</div>
+  <div class="botones">
+    <a href="intrinseca.html" class="boton intrinseca">Intrínseca</a>
+    <a href="instrumental.html" class="boton instrumental">Instrumental</a>
+  </div>
+
   <a href="index.html" class="volver">⬅ Volver al inicio</a>
 
 </body>
 </html>
-
-
-

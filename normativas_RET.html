@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Normativas RET</title>
+  <title>Línea de Tiempo: RAP y RET</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -15,53 +15,84 @@
     h1 {
       text-align: center;
       color: #4a148c;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
 
     .timeline {
-      max-width: 950px;
-      margin: 0 auto;
-      padding-left: 1rem;
-      border-left: 4px solid #6a1b9a;
-    }
-
-    .event {
-      margin-bottom: 2.5rem;
       position: relative;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
-    .event::before {
-      content: "";
+    .timeline::after {
+      content: '';
       position: absolute;
-      left: -1.1rem;
-      top: 0.4rem;
-      width: 1rem;
-      height: 1rem;
+      width: 6px;
       background-color: #6a1b9a;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .container {
+      padding: 20px 30px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+
+    .container::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: #6a1b9a;
+      border: 4px solid #fff;
+      top: 15px;
       border-radius: 50%;
+      z-index: 1;
     }
 
-    .event h3 {
-      margin-bottom: 0.3rem;
+    .left {
+      left: 0;
+    }
+
+    .right {
+      left: 50%;
+    }
+
+    .right::after {
+      left: -16px;
+    }
+
+    .content {
+      padding: 20px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h3 {
+      margin-top: 0;
       color: #311b92;
-      font-size: 1.1rem;
     }
 
-    .event h4 {
-      margin: 0.5rem 0 0.3rem;
+    .content h4 {
       color: #4a148c;
-      font-size: 1rem;
+      margin-bottom: 8px;
     }
 
-    .event p {
-      margin-top: 0.2rem;
+    .content p {
       font-size: 0.95rem;
       color: #333;
     }
 
     .volver {
-      display: inline-block;
-      margin-top: 3rem;
+      display: block;
+      margin: 4rem auto 0;
       padding: 0.7rem 2rem;
       background-color: #6a1b9a;
       color: white;
@@ -70,56 +101,88 @@
       font-weight: bold;
       font-size: 0.9rem;
       text-align: center;
+      max-width: 200px;
     }
 
     .volver:hover {
       background-color: #4a148c;
     }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      .container::after {
+        left: 60px;
+      }
+
+      .right {
+        left: 0%;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <h1>Línea de Tiempo: Normativas sobre las Regiones como Entidades Territoriales (RET)</h1>
+  <h1>Línea de Tiempo: Normativas y Creación de RAP y RET</h1>
 
   <div class="timeline">
 
-    <div class="event">
-      <h3>1991 – Constitución Política de Colombia</h3>
-      <h4>¿Qué regula?</h4>
-      <p>Art. 306: Crea las Regiones Administrativas y de Planificación (RAP) con personería jurídica, autonomía y patrimonio propio.<br>
-      Art. 307: Permite convertir las RAP en Regiones Entidades Territoriales (RET) mediante ley orgánica.<br>
-      Art. 288: Regula la distribución de competencias entre la Nación y las entidades territoriales.</p>
-      <h4>Vacíos identificados:</h4>
-      <p>No desarrolla el procedimiento ni estructura operativa para la transformación de RAP en RET.</p>
+    <div class="container left">
+      <div class="content">
+        <h3>1991 - Constitución Política</h3>
+        <h4>Normas clave</h4>
+        <p>Art. 306: Crea las RAP. <br> Art. 307: Abre paso a las RET. <br> Art. 288: Establece principios de competencias territoriales.</p>
+      </div>
     </div>
 
-    <div class="event">
-      <h3>2011 – Ley 1454</h3>
-      <h4>¿Qué regula?</h4>
-      <p>Adopta normas orgánicas sobre ordenamiento territorial. Reconoce las RAP como figuras de asociación regional para el desarrollo económico y social.</p>
-      <h4>Vacíos identificados:</h4>
-      <p>No se clarifica la autonomía, ni las competencias plenas, ni los mecanismos de financiación de las entidades territoriales asociadas.</p>
+    <div class="container right">
+      <div class="content">
+        <h3>2011 - Ley 1454</h3>
+        <h4>Ordenamiento Territorial</h4>
+        <p>Regula la creación de RAP. Vacío sobre autonomía y financiación.</p>
+      </div>
     </div>
 
-    <div class="event">
-      <h3>2019 – Ley 1962</h3>
-      <h4>¿Qué regula?</h4>
-      <p>Fortalece las RAP y establece condiciones y procedimiento para su conversión en RET.<br>
-      Establece funciones para RAP: planificación regional, promoción del desarrollo, protección ambiental.<br>
-      Regula atribuciones para RET: formulación de políticas, ordenamiento, enfoque de sostenibilidad y derechos.</p>
-      <h4>Principios de funcionamiento:</h4>
-      <p>Paz, diversidad territorial, sostenibilidad ambiental, participación, enfoque de género, derechos y regionalización.</p>
-      <h4>Seguimiento:</h4>
-      <p>El DNP acompaña a RAP y RET. Estas deben rendir cuentas al Congreso anualmente.</p>
-      <h4>Vacíos identificados:</h4>
-      <p>No se especifican claramente las fuentes de financiación. Persiste la centralización del SGP y regalías. Inequidad entre competencias y recursos disponibles.</p>
+    <div class="container left">
+      <div class="content">
+        <h3>2014 - RAP Central</h3>
+        <h4>Departamentos</h4>
+        <p>Boyacá, Cundinamarca, Meta y Tolima. Primera RAP creada oficialmente. <br>Hechos generadores: Planificación regional, articulación institucional, reactivación económica.<br> Marca: 'Región Central'.</p>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <h3>2016 - RAP Caribe</h3>
+        <h4>Departamentos</h4>
+        <p>Atlántico, Bolívar, Cesar, Córdoba, La Guajira, Magdalena, Sucre.<br>Creada por convenios interadministrativos. <br>Marca regional: "Soy Caribe".</p>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <h3>2018 - RAP Eje Cafetero</h3>
+        <h4>Departamentos</h4>
+        <p>Caldas, Quindío, Risaralda (Tolima se adhirió en 2020).<br>Hechos generadores: articulación institucional y desarrollo económico y social. <br>Marca: "Hecho en la Región Eje Cafetero".</p>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <h3>2019 - Ley 1962</h3>
+        <h4>Fortalecimiento RAP y RET</h4>
+        <p>Regula atribuciones, principios y seguimiento. <br>Vacíos: falta de claridad sobre fuentes de financiación y competencias reales.</p>
+      </div>
     </div>
 
   </div>
 
-  <div style="text-align: center;">
-    <a href="contenido_programatico.html" class="volver">⬅ Volver al contenido</a>
-  </div>
+  <a href="contenido_programatico.html" class="volver">⬅ Volver al contenido</a>
 
 </body>
 </html>
+

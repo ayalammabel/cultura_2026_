@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Línea de Tiempo: RAP y RET</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Línea de Tiempo: Normativas y Creación de RAP y RET</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -15,84 +15,85 @@
     h1 {
       text-align: center;
       color: #4a148c;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
     .timeline {
-      position: relative;
-      max-width: 1100px;
+      max-width: 950px;
       margin: 0 auto;
-    }
-
-    .timeline::after {
-      content: '';
-      position: absolute;
-      width: 6px;
-      background-color: #6a1b9a;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -3px;
-    }
-
-    .container {
-      padding: 20px 30px;
       position: relative;
-      background-color: inherit;
-      width: 50%;
+      padding: 2rem 0;
     }
 
-    .container::after {
-      content: '';
+    .timeline::before {
+      content: "";
       position: absolute;
-      width: 25px;
-      height: 25px;
-      right: -17px;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
       background-color: #6a1b9a;
-      border: 4px solid #fff;
-      top: 15px;
+    }
+
+    .event {
+      width: 45%;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .event::before {
+      content: "";
+      position: absolute;
+      top: 1.2rem;
+      width: 1rem;
+      height: 1rem;
+      background-color: #6a1b9a;
       border-radius: 50%;
       z-index: 1;
     }
 
-    .left {
+    .event.left {
       left: 0;
     }
 
-    .right {
-      left: 50%;
+    .event.left::before {
+      right: -0.5rem;
     }
 
-    .right::after {
-      left: -16px;
+    .event.right {
+      left: 55%;
     }
 
-    .content {
-      padding: 20px;
-      background-color: white;
-      position: relative;
-      border-radius: 6px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    .event.right::before {
+      left: -0.5rem;
     }
 
-    .content h3 {
-      margin-top: 0;
+    .event h3 {
+      margin-bottom: 0.3rem;
       color: #311b92;
+      font-size: 1.1rem;
     }
 
-    .content h4 {
+    .event h4 {
+      margin: 0.5rem 0 0.3rem;
       color: #4a148c;
-      margin-bottom: 8px;
+      font-size: 1rem;
     }
 
-    .content p {
+    .event p {
+      margin-top: 0.2rem;
       font-size: 0.95rem;
       color: #333;
     }
 
     .volver {
-      display: block;
-      margin: 4rem auto 0;
+      display: inline-block;
+      margin-top: 3rem;
       padding: 0.7rem 2rem;
       background-color: #6a1b9a;
       color: white;
@@ -101,88 +102,72 @@
       font-weight: bold;
       font-size: 0.9rem;
       text-align: center;
-      max-width: 200px;
     }
 
     .volver:hover {
       background-color: #4a148c;
     }
-
-    @media screen and (max-width: 768px) {
-      .container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-      }
-
-      .container::after {
-        left: 60px;
-      }
-
-      .right {
-        left: 0%;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <h1>Línea de Tiempo: Normativas y Creación de RAP y RET</h1>
+<h1>Línea de Tiempo: Normativas y Creación de RAP y RET</h1>
+<div class="timeline">
 
-  <div class="timeline">
-
-    <div class="container left">
-      <div class="content">
-        <h3>1991 - Constitución Política</h3>
-        <h4>Normas clave</h4>
-        <p>Art. 306: Crea las RAP. <br> Art. 307: Abre paso a las RET. <br> Art. 288: Establece principios de competencias territoriales.</p>
-      </div>
-    </div>
-
-    <div class="container right">
-      <div class="content">
-        <h3>2011 - Ley 1454</h3>
-        <h4>Ordenamiento Territorial</h4>
-        <p>Regula la creación de RAP. Vacío sobre autonomía y financiación.</p>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <h3>2014 - RAP Central</h3>
-        <h4>Departamentos</h4>
-        <p>Boyacá, Cundinamarca, Meta y Tolima. Primera RAP creada oficialmente. <br>Hechos generadores: Planificación regional, articulación institucional, reactivación económica.<br> Marca: 'Región Central'.</p>
-      </div>
-    </div>
-
-    <div class="container right">
-      <div class="content">
-        <h3>2016 - RAP Caribe</h3>
-        <h4>Departamentos</h4>
-        <p>Atlántico, Bolívar, Cesar, Córdoba, La Guajira, Magdalena, Sucre.<br>Creada por convenios interadministrativos. <br>Marca regional: "Soy Caribe".</p>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <h3>2018 - RAP Eje Cafetero</h3>
-        <h4>Departamentos</h4>
-        <p>Caldas, Quindío, Risaralda (Tolima se adhirió en 2020).<br>Hechos generadores: articulación institucional y desarrollo económico y social. <br>Marca: "Hecho en la Región Eje Cafetero".</p>
-      </div>
-    </div>
-
-    <div class="container right">
-      <div class="content">
-        <h3>2019 - Ley 1962</h3>
-        <h4>Fortalecimiento RAP y RET</h4>
-        <p>Regula atribuciones, principios y seguimiento. <br>Vacíos: falta de claridad sobre fuentes de financiación y competencias reales.</p>
-      </div>
-    </div>
-
+  <div class="event left">
+    <h3>1991 – Constitución Política</h3>
+    <h4>Normas clave</h4>
+    <p>Art. 306: Crea las RAP.<br>Art. 307: Abre paso a las RET.<br>Art. 288: Establece principios de competencias territoriales.</p>
   </div>
 
+  <div class="event right">
+    <h3>1994 – Ley 136</h3>
+    <h4>Municipios</h4>
+    <p>Normas sobre organización y funcionamiento municipal moderno.</p>
+  </div>
+
+  <div class="event left">
+    <h3>1994 – Ley 152</h3>
+    <h4>Planificación</h4>
+    <p>Establece el proceso de planeación participativa y los Planes de Desarrollo.</p>
+  </div>
+
+  <div class="event right">
+    <h3>2000 – Ley 617</h3>
+    <h4>Eficiencia del Gasto</h4>
+    <p>Reforma Ley 136 para mejorar desempeño fiscal territorial.</p>
+  </div>
+
+  <div class="event left">
+    <h3>2003 – Ley 819</h3>
+    <h4>Responsabilidad Fiscal</h4>
+    <p>Introduce sostenibilidad fiscal en planificación y presupuesto.</p>
+  </div>
+
+  <div class="event right">
+    <h3>2008 – Ley 1176</h3>
+    <h4>SGP</h4>
+    <p>Reglamenta distribución de recursos del Sistema General de Participaciones.</p>
+  </div>
+
+  <div class="event left">
+    <h3>2011 – Ley 1454</h3>
+    <h4>Ordenamiento Territorial</h4>
+    <p>Regula creación de RAP. Vacíos sobre autonomía y financiación.</p>
+  </div>
+
+  <div class="event right">
+    <h3>2019 – Ley 1962</h3>
+    <h4>Fortalecimiento RAP / Creación RET</h4>
+    <p>Detalla funciones de RAP y atribuciones de RET. Establece principios y seguimiento.</p>
+  </div>
+</div>
+
+<div style="text-align: center;">
   <a href="contenido_programatico.html" class="volver">⬅ Volver al contenido</a>
+</div>
 
 </body>
 </html>
+
 

@@ -11,26 +11,29 @@
       color: #333;
       margin: 0;
       padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     h1 {
       color: #4a148c;
       font-size: 28px;
-      margin-bottom: 2rem;
       text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .contenedores {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
     }
 
     .contenedor {
-      width: 100%;
-      max-width: 800px;
+      flex: 1 1 400px;
       background-color: #ffffff;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      margin-bottom: 3rem;
+      max-width: 600px;
     }
 
     .cabecera {
@@ -46,13 +49,13 @@
       background-color: #f9f9ff;
     }
 
-    .contenido ul {
+    .contenido ul, .contenido ol {
       padding-left: 1.5rem;
     }
 
     .contenido li {
       margin-bottom: 12px;
-      font-size: 17px;
+      font-size: 16px;
     }
 
     .dimensiones {
@@ -62,8 +65,8 @@
       text-align: center;
       font-weight: bold;
       font-size: 20px;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
+      margin: 2rem auto 1rem;
+      max-width: 400px;
     }
 
     .botones {
@@ -80,7 +83,6 @@
       font-size: 16px;
       font-weight: bold;
       text-decoration: none;
-      display: inline-block;
       transition: background-color 0.3s;
     }
 
@@ -99,7 +101,8 @@
     }
 
     .volver {
-      margin-top: 1rem;
+      display: block;
+      margin: 2rem auto 0;
       padding: 0.4rem 1rem;
       background-color: #6a1b9a;
       color: white;
@@ -108,6 +111,7 @@
       font-size: 13px;
       font-weight: bold;
       transition: background-color 0.3s;
+      width: fit-content;
     }
 
     .volver:hover {
@@ -119,17 +123,32 @@
 
   <h1>Filosofía Política</h1>
 
-  <div class="contenedor">
-    <div class="cabecera">Punto de partida: cultura, deporte y territorio.</div>
-    <div class="contenido">
-      <ul>
-        <li>La cultura es un pilar para cuidar la vida, la diversidad y el territorio. Una cultura viva y participativa es una cultura que protege y cuida sus territorios.</li>
-        <li>La cultura es un activo potencial de riqueza simbólica, económica y social para los territorios.</li>
-        <li>La cultura genera valor, arraigo, identidad.</li>
-        <li>La cultura como medio para la lectura territorial regional.</li>
-        <li>El deporte es un indicador de bienestar local y nacional.</li>
-        <li>El deporte es un medio de adaptación territorial y define patrones culturales para la sana convivencia, competencia y salud pública.</li>
-      </ul>
+  <div class="contenedores">
+    <div class="contenedor">
+      <div class="cabecera">Punto de partida: cultura, deporte y territorio.</div>
+      <div class="contenido">
+        <ul>
+          <li>La cultura es un pilar para cuidar la vida, la diversidad y el territorio. Una cultura viva y participativa es una cultura que protege y cuida sus territorios.</li>
+          <li>La cultura es un activo potencial de riqueza simbólica, económica y social para los territorios.</li>
+          <li>La cultura genera valor, arraigo, identidad.</li>
+          <li>La cultura como medio para la lectura territorial regional.</li>
+          <li>El deporte es un indicador de bienestar local y nacional.</li>
+          <li>El deporte es un medio de adaptación territorial y define patrones culturales para la sana convivencia, competencia y salud pública.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contenedor">
+      <div class="cabecera">Filosofía política del programa de gobierno</div>
+      <div class="contenido">
+        <ol>
+          <li>La cultura emergiendo como herramienta de construcción territorial: herramienta poderosa para el desarrollo participativo y descentralizado.</li>
+          <li>La cultura como pilar del desarrollo regional: eje estructural en los planes de ordenamiento y marca regional.</li>
+          <li>La cultura como instrumento de integración y cohesión social: valor instrumental y simbólico que fortalece identidad y justicia social.</li>
+          <li>La cultura como herramienta para construir un país más justo y equitativo: inclusión en planes regionales para reducir desigualdades.</li>
+          <li>La cultura en la búsqueda de un cambio cultural de mentalidad: transformación necesaria para la autonomía y valorización de identidades.</li>
+        </ol>
+      </div>
     </div>
   </div>
 

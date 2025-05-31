@@ -78,6 +78,12 @@
       background-color: #4a148c;
     }
 
+    img.full {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
     ul {
       padding-left: 1.5rem;
     }
@@ -89,71 +95,61 @@
 </head>
 <body>
 
-  <header>Deporte como Pilar de Transformación Territorial</header>
+<header>Deporte como Pilar de Transformación Territorial</header>
 
-  <div class="tabs">
-    <button class="tab-button active" onclick="showTab('retos')">📌 Retos</button>
-    <button class="tab-button" onclick="showTab('propuestas')">✅ Propuestas</button>
-    <button class="tab-button" onclick="showTab('medidas')">🛠️ Medidas a adoptar por el nuevo gobierno</button>
-    <button class="tab-button" onclick="showTab('financiamiento')">💰 Financiamiento</button>
-  </div>
+<div class="tabs">
+  <button class="tab-button active" onclick="showTab('propuestas')">✅ Propuestas</button>
+  <button class="tab-button" onclick="showTab('retos')">📌 Retos</button>
+  <button class="tab-button" onclick="showTab('medidas')">✔️ Medidas a adoptar</button>
+  <button class="tab-button" onclick="showTab('financiamiento')">💰 Financiamiento</button>
+</div>
 
-  <div class="content active" id="retos">
-    <h3>Principales Retos</h3>
-    <ul>
-      <li>Infraestructura deportiva deficiente.</li>
-      <li>Desarticulación entre niveles de gobierno.</li>
-      <li>Falta de formación técnica especializada.</li>
-      <li>Baja atracción y sostenibilidad de eventos deportivos.</li>
-      <li>Evaluación de impacto insuficiente de programas y políticas deportivas.</li>
-    </ul>
-  </div>
+<!-- Propuestas -->
+<div class="content active" id="propuestas">
+  <ul>
+    <li>Impulsar 25 APP para construcción y mantenimiento de infraestructura deportiva, priorizando participación local, sostenibilidad ambiental y bioculturalidad.</li>
+    <li>Crear sistema georreferenciado para identificar infraestructura pública y privada, facilitando una planificación eficiente y optimizando recursos.</li>
+    <li>Involucrar comunidades en el diseño de espacios que reflejen diversidad regional y permitan actividades deportivas tradicionales y culturales.</li>
+    <li>Desarrollar clusters de ecoturismo deportivo conectando senderos, ciclovías y comunidades, promoviendo el desarrollo local sostenible.</li>
+    <li>Implementar plataforma analítica unificada para datos de infraestructura, participación y tendencias, mejorando la toma de decisiones basada en evidencia.</li>
+    <li>Sistema nacional robusto para búsqueda y formación de talentos en todos los departamentos, incluyendo zonas rurales y remotas, ampliando la cobertura de programas actuales.</li>
+    <li>Lanzamiento de una plataforma que visibilice la diversidad cultural y territorial, uniendo a Colombia en torno al deporte y el orgullo nacional con el lema “Somos uno”.</li>
+  </ul>
+</div>
 
-  <div class="content" id="propuestas">
-    <h3>Propuestas</h3>
-    <ul>
-      <li>Democratizar el acceso al deporte con enfoque cultural para la convivencia pacífica, cuidado y sostenibilidad.</li>
-      <li>Implementar educación deportiva extraescolar en todo el país.</li>
-      <li>Impulsar alianzas público-privadas (APP) y cambios normativos para facilitar inversión privada.</li>
-      <li>Fortalecer el impacto regional de eventos deportivos como los Juegos Nacionales.</li>
-      <li>Implementar un modelo de APP regional para la construcción de 25 equipamientos deportivos.</li>
-      <li>Integrar los Juegos Deportivos Nacionales con el Festival Nacional de Culturas, Artes y Saberes.</li>
-      <li>Promover alianzas con el Ministerio de Salud para hábitos de vida saludables como política pública.</li>
-    </ul>
-  </div>
+<!-- Retos -->
+<div class="content" id="retos">
+  <ul>
+    <li>📌 <strong>Incrementar</strong> para 2028 en un 20% la población que realiza actividad física según la OMS.</li>
+    <li>📌 <strong>Integrar la prescripción del ejercicio en la atención primaria.</strong></li>
+    <li>📌 <strong>Ampliar programas comunitarios en todas</strong> las regiones.</li>
+    <li>● Creación de dos Programas nacionales: “Movimiento por la Vida” y “Comunidades Activas y Saludables”.</li>
+    <li>● Creación de un Marco regulatorio para integrar profesionales del deporte en salud pública.</li>
+    <li>● Capacitación obligatoria en prescripción de ejercicio para profesionales de salud.</li>
+    <li>● Impulsar programas de Fortalecimiento de educación física y jornada escolar complementaria con medición de impacto.</li>
+  </ul>
+</div>
 
-  <div class="content" id="medidas">
-    <h3>Medidas a adoptar por el nuevo gobierno</h3>
-    <ul>
-      <li>Mantener el enfoque de inclusión social y territorial en la política deportiva.</li>
-      <li>Reforzar la articulación con organismos privados y asociaciones deportivas.</li>
-      <li>Fortalecer programas como los Juegos Intercolegiados por su papel en integración juvenil.</li>
-      <li>Continuar con cooperación internacional como la UNESCO y el Banco Mundial.</li>
-    </ul>
-  </div>
+<!-- Medidas -->
+<div class="content" id="medidas">
+  <img src="deportes_medidas.PNG" alt="Medidas deporte" class="full">
+</div>
 
-  <div class="content" id="financiamiento">
-    <h3>Fuentes y Propuestas de Financiamiento Alternativo</h3>
-    <ul>
-      <li>20% del presupuesto de Mindeporte se transfiere al COC y federaciones deportivas.</li>
-      <li>2% destinado a la Escuela Nacional del Deporte.</li>
-      <li>25% del IVA del servicio de telefonía móvil va al sector deporte.</li>
-      <li>Propuesta para permitir a gobiernos locales presentar proyectos ante sus OCAD.</li>
-      <li>Modificar ley de APP para facilitar la inversión privada en infraestructura deportiva.</li>
-      <li>Aprovechar cooperación internacional para el posconflicto (COI, UNESCO, Banco Mundial).</li>
-    </ul>
-  </div>
+<!-- Financiamiento -->
+<div class="content" id="financiamiento">
+  <p>(Aquí puedes agregar las propuestas de financiación cuando estén listas)</p>
+</div>
 
-  <a href="index.html" class="volver">⬅ Volver al inicio</a>
+<a href="contenido_programatico.html" class="volver">⬅ Volver al inicio</a>
 
-  <script>
-    function showTab(tabId) {
-      document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
-      document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-      event.target.classList.add('active');
-    }
-  </script>
+<script>
+  function showTab(tabId) {
+    document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
 
 </body>
 </html>

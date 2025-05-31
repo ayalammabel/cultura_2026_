@@ -91,50 +91,66 @@
     li {
       margin-bottom: 0.6rem;
     }
+
+    p {
+      margin-bottom: 1.2rem;
+    }
   </style>
 </head>
 <body>
 
-  <header>Patrimonio como Pilar de Transformación Territorial</header>
+<header>Patrimonio como Pilar de Transformación Territorial</header>
 
-  <div class="tabs">
-    <button class="tab-button active" onclick="showTab('retos')">📌 Retos y Propuestas</button>
-    <button class="tab-button" onclick="showTab('mantener')">✔️🔧 Medidas a adoptar por el nuevo gobierno</button>
-    <button class="tab-button" onclick="showTab('financiamiento')">💰 Financiamiento</button>
-  </div>
+<div class="tabs">
+  <button class="tab-button active" onclick="showTab('propuestas')">✅ Propuestas</button>
+  <button class="tab-button" onclick="showTab('retos')">📌 Retos</button>
+  <button class="tab-button" onclick="showTab('mantener')">✔️🔧 Medidas a adoptar por el nuevo gobierno</button>
+  <button class="tab-button" onclick="showTab('financiamiento')">💰 Financiamiento</button>
+</div>
 
-  <div class="content active" id="retos">
-    <img src="Retos_Propuestas_Patrimonios.PNG" alt="Retos y Propuestas Patrimonio" class="full">
-  </div>
+<!-- Propuestas -->
+<div class="content active" id="propuestas">
+  <img src="propuestas_patrimonio.png" alt="Propuestas Patrimonio" class="full">
+</div>
 
-  <div class="content" id="mantener">
-    <h3>Aspectos a Mantener</h3>
-    <ul>
-      <li><strong>Infraestructura Patrimonial y Cultural:</strong> La recuperación, conservación y activación de espacios patrimoniales debe continuar con decisión. Ejemplos como la Estación de la Sabana, el San Juan de Dios y la Casa de la Cultura son fundamentales. Estos requieren gestión interinstitucional, participación comunitaria y modelos sostenibles.</li>
-      <li><strong>Espacios de memoria cultural y comunitaria:</strong> Se deben fortalecer los espacios de memoria construidos colectivamente con un enfoque ético y reparador, articulado con entidades como la Comisión de la Verdad, MAFAPO y Las Madres de la Escombrera.</li>
-    </ul>
-  </div>
+<!-- Retos -->
+<div class="content" id="retos">
+  <h3>Retos</h3>
+  <p><strong>Reconocer</strong> un país de múltiples identidades y memorias locales como medio para minimizar la <em>violencia cotidiana</em>, desde el arraigo y la vida en proximidad.</p>
+  <p>Mediante un <strong>enfoque biocultural</strong>: comprensión y cuidado de todas las formas de vida y un <strong>enfoque bioeconómico</strong>: fortaleciendo dinámicas productivas de escala local y regional.</p>
+  <p><strong>Y, entendiendo que debemos</strong> pasar de la conservación de objetos y prácticas a su activación social.</p>
+</div>
 
-  <div class="content" id="financiamiento">
-    <h3>Financiamiento Alternativo</h3>
-    <ul>
-      <li>Crear un fondo a partir de multas por faltas al patrimonio cultural para reinvertir en su conservación.</li>
-      <li>Diseñar programas de restauración priorizando a personas de bajos recursos.</li>
-      <li>Involucrar universidades y escuelas de arquitectura en intervenciones.</li>
-      <li>Contratar intervenciones a bienes privados de bajo ingreso económico.</li>
-    </ul>
-  </div>
+<!-- Medidas -->
+<div class="content" id="mantener">
+  <h3>Aspectos a Mantener</h3>
+  <ul>
+    <li><strong>Infraestructura Patrimonial y Cultural:</strong> La recuperación, conservación y activación de espacios patrimoniales debe continuar con decisión. Ejemplos como la Estación de la Sabana, el San Juan de Dios y la Casa de la Cultura son fundamentales. Estos requieren gestión interinstitucional, participación comunitaria y modelos sostenibles.</li>
+    <li><strong>Espacios de memoria cultural y comunitaria:</strong> Se deben fortalecer los espacios de memoria construidos colectivamente con un enfoque ético y reparador, articulado con entidades como la Comisión de la Verdad, MAFAPO y Las Madres de la Escombrera.</li>
+  </ul>
+</div>
 
-  <a href="contenido_programatico.html" class="volver">⬅ Volver al inicio</a>
+<!-- Financiamiento -->
+<div class="content" id="financiamiento">
+  <h3>Financiamiento Alternativo</h3>
+  <ul>
+    <li>Crear un fondo a partir de multas por faltas al patrimonio cultural para reinvertir en su conservación.</li>
+    <li>Diseñar programas de restauración priorizando a personas de bajos recursos.</li>
+    <li>Involucrar universidades y escuelas de arquitectura en intervenciones.</li>
+    <li>Contratar intervenciones a bienes privados de bajo ingreso económico.</li>
+  </ul>
+</div>
 
-  <script>
-    function showTab(tabId) {
-      document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
-      document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-      event.target.classList.add('active');
-    }
-  </script>
+<a href="contenido_programatico.html" class="volver">⬅ Volver al inicio</a>
+
+<script>
+  function showTab(tabId) {
+    document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
 
 </body>
 </html>

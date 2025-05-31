@@ -1,207 +1,115 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Datos Relevantes</title>
+  <meta charset="UTF-8">
+  <title>Datos Relevantes del Sector Cultural</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9fe;
+      background-color: #f9f9f9;
       margin: 0;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding: 30px;
+      color: #333;
+      text-align: center;
     }
 
     h1 {
-      color: #4a148c;
-      text-align: center;
-      margin-bottom: 2rem;
+      color: #4B2A86;
+      margin-bottom: 30px;
     }
 
-    .section {
-      max-width: 900px;
-      background-color: white;
-      padding: 2rem;
-      border-radius: 12px;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    .imagen {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 40px;
     }
 
-    .section h2 {
-      color: #6a1b9a;
-      margin-bottom: 1rem;
-      font-size: 22px;
+    .comparacion {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 20px;
     }
 
-    ul {
-      padding-left: 1.2rem;
-      line-height: 1.6;
+    .bloque {
+      background-color: #dce6f1;
+      padding: 20px;
+      border-radius: 8px;
+      width: 250px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .bloque h3 {
+      background-color: #4578B3;
+      color: white;
+      margin: -20px -20px 10px -20px;
+      padding: 10px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      font-size: 16px;
+    }
+
+    .bloque ul {
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .diferente {
+      font-size: 40px;
+      font-weight: bold;
+      padding: 10px 20px;
     }
 
     .volver {
-      margin-top: 2rem;
-      padding: 0.8rem 2rem;
-      background-color: #6a1b9a;
+      display: inline-block;
+      margin-top: 40px;
+      padding: 10px 25px;
+      background-color: #4B2A86;
       color: white;
-      border-radius: 10px;
-      font-size: 1rem;
-      font-weight: bold;
       text-decoration: none;
-      transition: background 0.3s ease;
+      font-weight: bold;
+      border-radius: 8px;
     }
 
     .volver:hover {
-      background-color: #4a148c;
-    }
-
-    .highlight {
-      font-weight: bold;
-      color: #333;
-    }
-
-    .image-container {
-      max-width: 95%;
-      background-color: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      margin-bottom: 2rem;
-    }
-
-    .image-container img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      border-radius: 8px;
+      background-color: #311b92;
     }
   </style>
 </head>
 <body>
 
-  <h1>Datos Relevantes del Patrimonio y la Cultura en Colombia</h1>
+  <h1>Datos Relevantes del Sector Cultural y Creativo</h1>
 
-  <div class="section">
-    <h2>📊 Economía Cultural</h2>
-    <ul>
-      <li>El presupuesto público para cultura aumentó un 236% entre 2002 y 2022. Entre 2020 y 2021 creció 53%, alcanzando COP 615.000 millones. Aun así, representa menos del 0.05% del PIB nacional.</li>
-      <li>En 2022, la economía cultural y creativa aportó $35,8 billones (2,7% del PIB). Se estima un potencial de hasta $28 billones.</li>
-      <li>En 2023 (preliminar), el valor agregado del sector creció 3,4% frente a 2022.</li>
-      <li>Entre 2014 y 2023p, el valor agregado del sector cultural fue en promedio del 3% del total nacional.</li>
-      <li>Distribución del valor agregado: 47,8% Creaciones Funcionales, 28,8% Artes y Patrimonio, 23,4% Industrias Culturales.</li>
-      <li>El empleo en el sector creció 6,6% en 2023p respecto a 2022p y 1,3% en el primer trimestre de 2024 frente a 2023.</li>
-      <li>La participación de la población ocupada del sector fue del 3,7% en 2023p (3,5% en 2022p).</li>
-      <li>La Ley de Espectáculos Públicos (LEP) recaudó $78.801 millones en 2023. Bogotá, Medellín y Cota representaron el 77,5% del total.</li>
-      <li>Los eventos de espectáculos públicos crecieron 22,6% en 2023 (de 15.869 en 2022 a 19.462).</li>
-      <li>Los proyectos cinematográficos reconocidos movilizaron $71.191 millones en 2023 (aumento de 41,6% respecto a 2022).</li>
-      <li>El Fondo para el Desarrollo Cinematográfico recaudó $33.962 millones en 2023 (35,3% más que en 2022).</li>
-      <li>Para 2025 se proyectan COP 87.906 millones para apoyar 3.003 proyectos en 662 municipios.</li>
-    </ul>
-  </div>
-  
-   <div class="section">
-    <h2>📅 Agenda Cultural 2025</h2>
-    <p>Estos son algunos de los eventos culturales más representativos en Colombia (y uno internacional), organizados por ciudad, mes e intervalo de fechas:</p>
-    <div style="overflow-x:auto;">
-      <table style="width:100%; border-collapse: collapse; text-align: left;">
-        <thead>
-          <tr style="background-color: #ede7f6; color: #4a148c;">
-            <th style="padding: 10px; border-bottom: 2px solid #ccc;">Ciudad</th>
-            <th style="padding: 10px; border-bottom: 2px solid #ccc;">Evento</th>
-            <th style="padding: 10px; border-bottom: 2px solid #ccc;">Mes</th>
-            <th style="padding: 10px; border-bottom: 2px solid #ccc;">Inicio</th>
-            <th style="padding: 10px; border-bottom: 2px solid #ccc;">Fin</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Pasto</td><td>Carnaval de Blancos y Negros</td><td>Enero</td><td>2</td><td>7</td></tr>
-          <tr><td>Manizales</td><td>Feria de Manizalez</td><td>Enero</td><td>4</td><td>12</td></tr>
-          <tr><td>Sincelejo</td><td>Fiestas de Sincelejo</td><td>Enero</td><td>20</td><td>20</td></tr>
-          <tr><td>Bogotá</td><td>Vitrina Turística de ANATO</td><td>Febrero</td><td>26</td><td>28</td></tr>
-          <tr><td>Barranquilla</td><td>Carnaval de Barranquilla</td><td>Marzo</td><td>1</td><td>4</td></tr>
-          <tr><td>Cartagena</td><td>Festival de Música del Caribe</td><td>Marzo</td><td>21</td><td>24</td></tr>
-          <tr><td>Bogotá</td><td>Festival Iberoamericano de Teatro</td><td>Abril</td><td>1</td><td>17</td></tr>
-          <tr><td>Popayán</td><td>Semana Santa</td><td>Abril</td><td>13</td><td>20</td></tr>
-          <tr><td>Valledupar</td><td>Festival de la Leyenda Vallenata</td><td>Abril-Mayo</td><td>30</td><td>3</td></tr>
-          <tr><td>Bogotá</td><td>Feria del Libro</td><td>Abril-Mayo</td><td>25</td><td>11</td></tr>
-          <tr><td>Ginebra (Valle)</td><td>Festival del Mono Núñez</td><td>Mayo-Junio</td><td>29</td><td>1</td></tr>
-          <tr><td>Ibagué</td><td>Fiestas de San Juan</td><td>Junio</td><td>20</td><td>28</td></tr>
-          <tr><td>Neiva</td><td>Festival Folclórico y Reinado del Bambuco</td><td>Junio-Julio</td><td>15</td><td>1</td></tr>
-          <tr><td>Loreto - Perú</td><td>Festival Internacional de la Confraternidad Amazónica</td><td>Julio</td><td>15</td><td>20</td></tr>
-          <tr><td>Medellín</td><td>Feria de las Flores</td><td>Agosto</td><td>1</td><td>10</td></tr>
-          <tr><td>Cali</td><td>Festival Musical del Pacífico "Petronio Álvarez"</td><td>Agosto</td><td>-</td><td>-</td></tr>
-          <tr><td>Quibdó</td><td>Fiestas de San Pacho</td><td>Septiembre-Octubre</td><td>20</td><td>4</td></tr>
-          <tr><td>Villa del Rosario</td><td>Ferias y Fiestas de la Uva</td><td>Octubre</td><td>4</td><td>14</td></tr>
-          <tr><td>Cali</td><td>Festival Mundial de Salsa</td><td>Octubre</td><td>10</td><td>14</td></tr>
-          <tr><td>Villavicencio</td><td>Feria Internacional del Joropo</td><td>Octubre</td><td>-</td><td>-</td></tr>
-          <tr><td>Cartagena</td><td>Fiesta de Independencia</td><td>Noviembre</td><td>11</td><td>11</td></tr>
-          <tr><td>Medellín</td><td>Alumbrado Navideño</td><td>Diciembre</td><td>-</td><td>-</td></tr>
-          <tr><td>Tunja</td><td>Aguinaldo Boyacense</td><td>Diciembre</td><td>16</td><td>22</td></tr>
-          <tr><td>Cali</td><td>Feria de Cali</td><td>Diciembre</td><td>25</td><td>30</td></tr>
-        </tbody>
-      </table>
+  <!-- Imagen principal -->
+  <img src="datos_relevantes.jpg" alt="Infografía del sector cultural y creativo" class="imagen">
+
+  <!-- Comparación recreada en HTML -->
+  <div class="comparacion">
+    <div class="bloque">
+      <h3>Cuentas Nacionales</h3>
+      <ul>
+        <li>Actividades artísticas, de entretenimiento y recreación y otras actividades de servicios.</li>
+        <li><span style="color: darkred;">Actividades de los hogares.</span></li>
+        <li>Juegos de Azar</li>
+      </ul>
+    </div>
+
+    <div class="diferente">≠</div>
+
+    <div class="bloque">
+      <h3>Cuenta Satélite de la Cultura</h3>
+      <ul>
+        <li>Se centra en las actividades culturales y creativas.</li>
+      </ul>
     </div>
   </div>
 
-
-  <div class="section">
-    <h2>🎓 Instituciones de Educación Superior</h2>
-    <p><span class="highlight">290 Instituciones</span> de Educación Superior cuentan con oferta cultural-patrimonial: museos, colecciones culturales, infraestructuras culturales, salas expositivas, programas académicos y archivos históricos.</p>
-  </div>
-
-  <div class="section">
-    <h2>🏛️ Vigías del Patrimonio</h2>
-    <p><span class="highlight">350 Organizaciones</span> de Vigías del Patrimonio están distribuidas en <span class="highlight">27 departamentos</span> del país, fomentando la protección cultural desde lo local.</p>
-  </div>
-
-  <div class="section">
-    <h2>🗺️ Mapa de Patrimonios en Colombia</h2>
-    <div class="image-container">
-      <img src="mapa_patrimonio.PNG" alt="Mapa de patrimonios en Colombia">
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>🌍 Sitios Patrimonio Mundial (UNESCO)</h2>
-    <ul>
-      <li>Centro histórico de Santa Cruz de Mompox (1995)</li>
-      <li>El Paisaje Cultural del Café de Colombia (2011)</li>
-      <li>Parque Arqueológico de San Agustín (1995)</li>
-      <li>Parque Arqueológico Nacional de Tierradentro (1995)</li>
-      <li>Parque Nacional de Chiribiquete – “La maloca del jaguar” (2018)</li>
-      <li>Parque Nacional de los Katíos (1994)</li>
-      <li>Puerto, fortalezas y conjunto monumental de Cartagena (1984)</li>
-      <li>Qhapaq Ñan - Sistema vial andino (2014)</li>
-      <li>Santuario de Fauna y Flora de Malpelo (2006)</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>🎭 Patrimonio Cultural Inmaterial (UNESCO)</h2>
-    <ul>
-      <li>Las pinturas vivas de Galeras, Sucre</li>
-      <li>Partería: conocimientos, competencias y prácticas</li>
-      <li>Sistema de conocimiento ancestral de los pueblos indígenas de la Sierra Nevada de Santa Marta</li>
-      <li>Barniz de Pasto Mopa-Mopa (Putumayo y Nariño)</li>
-      <li>Cantos de trabajo de Los Llanos</li>
-      <li>El vallenato, música tradicional del Magdalena Grande</li>
-      <li>Música de marimba y cantos del Pacífico Sur colombiano</li>
-      <li>Fiesta de San Francisco de Asís en Quibdó</li>
-      <li>Conocimientos tradicionales de los chamanes jaguares de Yuruparí</li>
-      <li>El sistema normativo wayuu y el pütchipü’üi (“palabrero”)</li>
-      <li>Procesiones de Semana Santa en Popayán</li>
-      <li>Carnaval de Negros y Blancos</li>
-      <li>Carnaval de Barranquilla</li>
-      <li>Espacio cultural de Palenque de San Basilio</li>
-    </ul>
-  </div>
-
-  <a href="contenido_programatico.html" class="volver">⬅ Volver al contenido</a>
+  <!-- Botón de volver -->
+  <a href="propuesta_sectorial.html" class="volver">⬅ Volver al contenido</a>
 
 </body>
 </html>
-
 

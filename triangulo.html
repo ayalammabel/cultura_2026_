@@ -5,44 +5,16 @@
   <title>La Cultura del Cuidado</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #f9f9f9;
-      margin: 0;
-      padding: 40px;
       text-align: center;
+      padding: 40px;
+      margin: 0;
     }
 
     h1 {
       color: #333;
-      margin-bottom: 20px;
-    }
-
-    .info-box {
-      max-width: 600px;
-      background-color: #e7f0fa;
-      border-left: 5px solid #2e7d32;
-      padding: 20px;
-      border-radius: 6px;
-      margin: 40px auto 20px;
-      text-align: left;
-    }
-
-    .info-box h3 {
-      color: #2e7d32;
-      margin-top: 0;
-    }
-
-    .info-box ul {
-      padding-left: 20px;
-    }
-
-    .info-box li {
-      margin-bottom: 5px;
-    }
-
-    .info-box p {
-      margin-top: 15px;
-      font-weight: bold;
+      margin-bottom: 30px;
     }
 
     .volver {
@@ -59,39 +31,55 @@
     .volver:hover {
       background-color: #311b92;
     }
+
+    .info-box {
+      max-width: 600px;
+      background-color: #e7f0fa;
+      border-left: 5px solid #2e7d32;
+      padding: 20px;
+      border-radius: 6px;
+      margin: 40px auto 20px;
+      text-align: left;
+    }
+
+    .info-box h3 {
+      color: #2e7d32;
+    }
   </style>
 </head>
 <body>
 
   <h1>La Cultura del Cuidado</h1>
 
+  <!-- Triángulo plano en SVG -->
   <svg width="400" height="360" viewBox="0 0 400 360">
-    <!-- Triángulo principal grande -->
-    <polygon points="200,40 60,300 340,300" fill="none" stroke="none"/>
+    <!-- Parte superior (verde claro) -->
+    <polygon points="200,40 100,180 300,180" fill="#d4f4a1" />
+    
+    <!-- Parte inferior izquierda (verde agua) -->
+    <polygon points="100,180 200,310 200,180" fill="#a1f0cf" />
+    
+    <!-- Parte inferior derecha (morado claro) -->
+    <polygon points="200,180 300,180 200,310" fill="#c7a6f7" />
+    
+    <!-- Centro (celeste claro) -->
+    <polygon points="140,180 260,180 200,260" fill="#b1d7f5" />
 
-    <!-- Parte superior -->
-    <polygon points="200,40 130,190 270,190" fill="#d4f4a1" />
-    <!-- Parte inferior izquierda -->
-    <polygon points="130,190 200,310 200,190" fill="#a1f0cf" />
-    <!-- Parte inferior derecha -->
-    <polygon points="200,190 200,310 270,190" fill="#c7a6f7" />
-    <!-- Centro -->
-    <polygon points="130,190 200,190 270,190 200,260" fill="#b1d7f5" />
-
-    <!-- Textos -->
+    <!-- Etiquetas -->
     <text x="200" y="25" text-anchor="middle" font-size="14" font-weight="bold">Protección de la vida en todas sus formas</text>
 
     <text x="100" y="280" text-anchor="middle" font-size="13" font-weight="bold">Condiciones para el</text>
     <text x="100" y="295" text-anchor="middle" font-size="13" font-weight="bold">ejercicio pleno de</text>
     <text x="100" y="310" text-anchor="middle" font-size="13" font-weight="bold">las libertades</text>
 
-    <text x="300" y="280" text-anchor="middle" font-size="13" font-weight="bold">Participación para el</text>
-    <text x="300" y="295" text-anchor="middle" font-size="13" font-weight="bold">desarrollo</text>
+    <text x="300" y="285" text-anchor="middle" font-size="13" font-weight="bold">Participación para el</text>
+    <text x="300" y="300" text-anchor="middle" font-size="13" font-weight="bold">desarrollo</text>
 
-    <text x="200" y="225" text-anchor="middle" font-size="13" fill="red" font-weight="bold">La Cultura del Cuidado</text>
-    <text x="200" y="240" text-anchor="middle" font-size="13" fill="red" font-style="italic">“Ciudadanía”</text>
+    <text x="200" y="215" text-anchor="middle" font-size="13" fill="red" font-weight="bold">La Cultura del Cuidado</text>
+    <text x="200" y="230" text-anchor="middle" font-size="13" fill="red" font-style="italic">“Ciudadanía”</text>
   </svg>
 
+  <!-- Información adicional -->
   <div class="info-box">
     <h3>Responsables: Sectores de la Sociedad</h3>
     <ul>

@@ -1,63 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Triángulo de la Cultura del Cuidado</title>
+  <meta charset="UTF-8" />
+  <title>La Cultura del Cuidado</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
     }
 
     .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .left-info {
+      max-width: 300px;
+      background-color: #e7f0fa;
+      border-left: 5px solid #2e7d32;
+      padding: 20px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+
+    .left-info h3 {
+      color: #2e7d32;
+      margin-top: 0;
+    }
+
+    .left-info ul {
+      padding-left: 20px;
+    }
+
+    .left-info li {
+      margin-bottom: 5px;
+    }
+
+    .left-info p {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .triangle-container {
       position: relative;
-      width: 400px;
-      height: 350px;
+      width: 300px;
+      height: 260px;
     }
 
     .triangle {
       width: 0;
       height: 0;
       position: absolute;
-      text-align: center;
-      line-height: 1.2;
     }
 
     .top {
-      border-left: 200px solid transparent;
-      border-right: 200px solid transparent;
-      border-bottom: 173px solid #d0f0a7;
+      border-left: 150px solid transparent;
+      border-right: 150px solid transparent;
+      border-bottom: 130px solid #d4f4a1;
       top: 0;
       left: 0;
     }
 
     .left {
-      border-top: 173px solid transparent;
-      border-right: 200px solid #a1f0cf;
-      border-bottom: 173px solid transparent;
+      border-top: 130px solid transparent;
+      border-right: 150px solid #a1f0cf;
+      border-bottom: 130px solid transparent;
       top: 0;
       left: 0;
     }
 
     .right {
-      border-top: 173px solid transparent;
-      border-left: 200px solid #c7a6f7;
-      border-bottom: 173px solid transparent;
+      border-top: 130px solid transparent;
+      border-left: 150px solid #c7a6f7;
+      border-bottom: 130px solid transparent;
       top: 0;
-      right: 0;
+      left: 0;
     }
 
     .center {
       position: absolute;
-      top: 110px;
-      left: 100px;
-      width: 200px;
-      height: 120px;
-      background: #b1d7f5;
+      top: 65px;
+      left: 75px;
+      width: 150px;
+      height: 130px;
+      background-color: #b1d7f5;
       clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
       display: flex;
       justify-content: center;
@@ -65,44 +101,109 @@
       text-align: center;
       font-weight: bold;
       color: red;
+      font-size: 14px;
     }
 
-    .text {
+    .label {
       position: absolute;
-      width: 160px;
-      color: black;
+      width: 120px;
+      text-align: center;
       font-weight: bold;
+      font-size: 13px;
+      color: #000;
     }
 
-    .top-text {
-      top: 40px;
-      left: 120px;
+    .label-top {
+      top: -30px;
+      left: 90px;
     }
 
-    .left-text {
-      top: 140px;
-      left: 10px;
+    .label-left {
+      top: 100px;
+      left: -140px;
     }
 
-    .right-text {
-      top: 140px;
-      right: 10px;
+    .label-right {
+      top: 100px;
+      left: 310px;
+    }
+
+    .volver {
+      display: block;
+      margin: 50px auto 0 auto;
+      padding: 10px 25px;
+      background-color: #4a148c;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      width: fit-content;
+      font-size: 0.95rem;
+    }
+
+    .volver:hover {
+      background-color: #311b92;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .label-left, .label-right {
+        position: static;
+        margin-top: 10px;
+      }
+
+      .label-top {
+        position: static;
+        margin-bottom: 10px;
+      }
+
+      .triangle-container {
+        margin-bottom: 20px;
+      }
     }
   </style>
 </head>
 <body>
+
+  <h1>La Cultura del Cuidado</h1>
+
   <div class="container">
-    <div class="triangle top"></div>
-    <div class="triangle left"></div>
-    <div class="triangle right"></div>
-    <div class="text top-text">Protección de la vida en todas sus formas</div>
-    <div class="text left-text">Condiciones para el ejercicio pleno de las libertades</div>
-    <div class="text right-text">Participación para el desarrollo</div>
-    <div class="center">
-      <div>
+    <!-- Columna izquierda -->
+    <div class="left-info">
+      <h3>Responsables: Sectores de la Sociedad</h3>
+      <ul>
+        <li>Sector Público</li>
+        <li>Sector Privado</li>
+        <li>Tercer Sector (Organizaciones Sociales)</li>
+        <li>Sector Financiero</li>
+        <li>Sector Solidario</li>
+        <li>Organizaciones Internacionales</li>
+      </ul>
+      <p>Recomendación: No se necesita crear nuevas figuras jurídicas ni modificar leyes: usar y potenciar los Esquemas Asociativos Territoriales (EAT) ya previstos en la ley.</p>
+    </div>
+
+    <!-- Triángulo central -->
+    <div class="triangle-container">
+      <div class="triangle top"></div>
+      <div class="triangle left"></div>
+      <div class="triangle right"></div>
+      <div class="center">
         La Cultura del Cuidado<br><span style="font-style: italic;">“Ciudadanía”</span>
       </div>
+      <div class="label label-top">Protección de la vida en todas sus formas</div>
+      <div class="label label-left">Condiciones para el ejercicio pleno de las libertades</div>
+      <div class="label label-right">Participación para el desarrollo</div>
     </div>
   </div>
+
+  <!-- Botón volver -->
+  <a href="propuesta_sectorial.html" class="volver">⬅ Volver al contenido</a>
+
 </body>
 </html>
+
